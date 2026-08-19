@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Regestration -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Admin Kit</h1>
+        <p>Welcome, Raghavendra</p>
+    </header>
+
+    <main class="registration-page">
+        <h2>Event Registration</h2>
+
+        <section class="registration-details">
+            <h3>Community Technology Meetup</h3>
+            <p>Join local developers, designers and technology enthusiasts...</p>
+            <p>Date: 11th - Tuesday - July- 2026</p>
+            <p>Time: 11:26PM IST</p>
+            <p>venue:Rajahmundry</p>
+        </section>
+
+        <section class="form-sec">
+            <h3>Please Register by filling below details</h3>
+            <form>
+                <div class="field name-text">
+                    <label for="name">Full Name
+                        <b style="color: rgba(255, 0, 0, 0.365);">*</b>
+                    </label>
+                    <input type="text" name="name" autocomplete="name" id="name" placeholder="Enter Name" required>
+                </div>
+
+                <div class="field email-text">
+                    <label for="email">Email Address
+                        <b style="color: rgba(255, 0, 0, 0.365);">*</b>
+                    </label>
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter Email" required>
+                </div>
+
+                <div class="field level-options">
+                    <label for="level">Experience Level</label>
+                    <select name="level" id="level">
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="experienced">Experienced</option>
+                    </select>
+                </div>
+
+                <div class="field requirements-textarea">
+                    <label for="requirements">Dietary Requirements</label>
+                    <textarea name="requirements" id="requirements" placeholder="Enter Text" rows="4"></textarea>
+                </div>
+
+                <div class="terms-checkbox">
+                    <input type="checkbox" name="terms" id="terms" required>
+                    <label for="terms">I agree to the Terms and Conditions
+                        <b style="color: rgba(255, 0, 0, 0.365);">*</b></label>
+                </div>
+
+                <div class="field form-actions">
+                    <button type="submit" class="register-btn">Register</button>
+                    <a href="index.html">Cancel</a>
+                </div>
+            </form>
+        </section>
+
+        <!-- <section>
+            <h2>Example Success Message</h2>
+            <p>✔ Registration submitted successfully.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Example Validation Error</h2>
+            <label for="email-add">Email Address</label>
+            <input type="text" name="email-add" id="email-add">
+
+            <p>❌ Please enter a valid email address.</p>
+        </section> -->
+
+    </main>
+</body>
+
+</html>

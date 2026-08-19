@@ -1,0 +1,131 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+:root {
+    --gradent-color: linear-gradient(90deg, rgba(116, 161, 179, 1) 0%, rgba(96, 128, 179, 1) 47%, rgba(85, 98, 163, 1) 100%);
+    --font-family: "Helvetica Neue", sans-serif;
+    --basic-text-color: azure;
+    --basic-spacing: 0.4rem;
+}
+
+
+body {
+    background: var(--gradent-color);
+    font-family: var(--font-family);
+    width: 100dvw;
+    height: 100dvh;
+    color: var(--basic-text-color);
+    margin: 0 10px 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Site Header */
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site-header h1 {
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+.site-header p {
+    font-size: 1.5rem;
+}
+
+/* registration-page */
+.registration-page {}
+
+.registration-page>h2 {
+    font-size: x-large;
+    font-weight: 600;
+    margin-bottom: var(--basic-spacing);
+}
+
+
+/* registration-details */
+.registration-details {
+    margin-bottom: var(--basic-spacing);
+}
+
+.registration-details>h3 {
+    margin-bottom: var(--basic-spacing);
+}
+
+.registration-details p {
+    padding: 2px;
+    margin-left: var(--basic-spacing);
+}
+
+/* Form */
+.form-sec>h3 {
+    margin-bottom: var(--basic-spacing);
+    font-weight: 550;
+}
+
+form {
+    margin-left: 2rem;
+
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Field */
+.field {
+    margin-bottom: var(--basic-spacing);
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.field>label {
+    margin-bottom: var(--basic-spacing);
+    margin-left: -20px;
+    font-weight: bold;
+}
+
+
+/* terms-checkbox */
+.terms-checkbox {
+    margin-top: var(--basic-spacing);
+    margin-bottom: var(--basic-spacing);
+}
+
+/* form-actions */
+.form-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.form-actions>a {
+    color: black;
+    background-color: var(--basic-text-color);
+    text-decoration: none;
+
+    padding: 6px;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+.register-btn {
+    width: 90%;
+    border-radius: 10px;
+    cursor: pointer;
+}
