@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Dashboard</title>
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/pages.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>&#9749; Cafe Operations Dashboard</h1>
+    </header>
+
+    <aside class="sidebar">
+        <h2>NAVIGATION</h2>
+        <nav class="side-nav" style="grid-area: sidenav;">
+            <a class="nav-link active" href="#">Overview</a>
+            <a class="nav-link" href="#">Categories</a>
+            <a class="nav-link" href="#">Orders</a>
+        </nav>
+    </aside>
+
+    <main>
+        <h2>Dashboard</h2>
+
+        <section class="cards-data">
+            <h3>TODAY' S OVERVIEW</h3>
+            <section class="overview-cards">
+                <div class="overview-card">
+                    <h4>Revenue</h4>
+                    <p>₹12,500</p>
+                </div>
+
+                <div class="overview-card">
+                    <h4>Orders</h4>
+                    <p>86</p>
+                </div>
+
+                <div class="overview-card">
+                    <h4>Avg Time</h4>
+                    <p>8 Min</p>
+                </div>
+
+                <div class="overview-card">
+                    <h4>Pending</h4>
+                    <p>7</p>
+                </div>
+            </section>
+
+            <h3>MENU CATEGORIES</h3>
+            <section class="categories-cards">
+                <div class="categories-card">
+                    <h4>Coffe</h4>
+                    <p>12 Items</p>
+                </div>
+
+                <div class="categories-card">
+                    <h4>Tea</h4>
+                    <p>8 Items</p>
+                </div>
+
+                <div class="categories-card">
+                    <h4>Pastries</h4>
+                    <p>6 Items</p>
+                </div>
+
+                <div class="categories-card">
+                    <h4>Cold</h4>
+                    <p>10 Items</p>
+                </div>
+            </section>
+        </section>
+
+        <secction class="table-data">
+            <h3>Recent Orders</h3>
+
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Menu Item</th>
+                    <th>Quantaty</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>Cappuccino</td>
+                        <td>2</td>
+                        <td>₹240</td>
+                        <td>Ready</td>
+                    </tr>
+
+                    <tr>
+                        <td>02</td>
+                        <td>Sandwich</td>
+                        <td>1</td>
+                        <td>₹180</td>
+                        <td>Preparing</td>
+                    </tr>
+                </tbody>
+            </table>
+        </secction>
+    </main>
+</body>
+
+</html>
