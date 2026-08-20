@@ -4,3 +4,25 @@ navigation links,
 badges,
 and table styling
 */
+
+.cards-data {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.overview-cards {
+    display: flex;
+    gap: 2vw;
+}
+
+.overview-card {
+    background-color: var(--basic-text-color);
+    color: black;
+
+    padding: 1rem;
+    border: solid 3px black;
+    border-radius: 10px;
+    box-shadow: 5px 6px 10px 5px black;
+}

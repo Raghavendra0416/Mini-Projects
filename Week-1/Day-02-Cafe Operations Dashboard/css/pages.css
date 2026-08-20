@@ -3,3 +3,20 @@ Dashboard-specific summary grid,
 category grid,
 and media queries
 */
+
+/* Dashboard */
+
+.dashboard-page {
+    /* the below grid is providing space between the items -> the reason is: */
+
+    /* Grid container has more space than its content needs (in the block/vertical direction, usually) */
+    /* Content (rows) takes up less space than available */
+    /* Grid distributes that leftover space between the rows to fill the container */
+    /* Visually this looks like gap, but it isn't actual gap — it' s the rows themselves getting pushed apart */
+    display: grid;
+
+    /* rows stack at natural height, leftover space goes at the bottom, unused */
+    align-content: start;
+
+    gap: 1rem;
+}
