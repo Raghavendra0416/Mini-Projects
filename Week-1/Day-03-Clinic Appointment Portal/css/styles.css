@@ -1,0 +1,175 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --gradent-color: linear-gradient(90deg, rgba(116, 161, 179, 1) 0%, rgba(96, 128, 179, 1) 47%, rgba(85, 98, 163, 1) 100%);
+    --font-family: "Helvetica Neue", sans-serif;
+    --basic-text-color: azure;
+    --basic-spacing: 0.4rem;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    /* overflow-x: hidden; */
+
+    background: var(--gradent-color);
+    /* overflow-x: hidden;
+    overscroll-behavior-x: none; */
+}
+
+/* Header Section*/
+summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(90deg, rgba(130, 179, 167, 0.63), rgba(88, 61, 176, 0.815), rgba(159, 135, 202, 0.4));
+    list-style: none;
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.menu-btn {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Add the down arrow to the button by default */
+.menu-btn::after {
+    content: ' ▼';
+}
+
+/* Swap to an up arrow when the details tag is opened */
+details[open] .menu-btn::after {
+    content: ' ▲';
+}
+
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, rgba(130, 179, 167, 0.63), rgba(88, 61, 176, 0.815), rgba(159, 135, 202, 0.4));
+    border-bottom: 1px solid black;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 15px 20px;
+    border-top: 1px solid black;
+    text-decoration: none;
+    color: black;
+    font-weight: 530;
+}
+
+/* Main Section */
+main>h2 {
+    margin: 20px 10px 3px;
+}
+
+main>p {
+    margin: 0px 10px 9px;
+}
+
+main>h3 {
+    margin: 5px 10px 9px;
+}
+
+
+/* Appointments */
+/* .appointments {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 15px;
+} */
+
+/* Cards */
+.cards {
+    margin: 5px 10px 9px;
+
+    display: grid;
+    gap: 1rem;
+}
+
+.card {
+    background-color: rgba(167, 172, 176, 0.66);
+    padding: 20px;
+
+    border: 3px solid black;
+    border-radius: 20px;
+    box-shadow: 4px 3px 2px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card button {
+    padding: 6px;
+    background-color: rgba(206, 203, 204, 0.635);
+
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px;
+    cursor: pointer;
+
+}
+
+/* Appointments */
+#appointments {
+    margin: 1rem 1rem 0px;
+}
+
+/* Table */
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    margin: 1rem 2rem;
+}
+
+table {
+    padding: 10px;
+    /* margin: 1rem 20px 1rem; */
+    /* Forces table to stretch based on text size */
+    width: max-content;
+    min-width: 100%;
+
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+th,
+td {
+    white-space: nowrap;
+    /*stops text from wrapping,forcing the scroll*/
+    width: 1%;
+}
+
+th {
+    padding: 0.6rem;
+}
+
+td {
+    padding: 0.3rem;
+}

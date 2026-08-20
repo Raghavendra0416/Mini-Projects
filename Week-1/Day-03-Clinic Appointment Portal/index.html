@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Portal</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- The details tag controls the whole header -->
+            <details>
+
+                <!-- The summary acts as your top bar -->
+                <summary>
+                    <h1>Clinic Portal</h1>
+                    <span class="menu-btn">Menu</span>
+                </summary>
+
+                <!-- The dropdown links naturally fall below the summary -->
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#doctors">Doctors</a></li>
+                    <li><a href="#appointments">Appointments</a></li>
+                </ul>
+
+            </details>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Clinic Appointment Portal</h2>
+        <p>Find doctors and manage your upcoming appointments</p>
+
+        <h3 id="doctors">Our Doctors</h3>
+
+        <section class="cards">
+            <div class="card">
+                <h4>Dr. Anjali Rao</h4>
+                <p>General Physician</p>
+                <p>Available today</p>
+                <button>Book Appointment</button>
+            </div>
+            <div class="card">
+                <h4>Dr. Ravi Kumar</h4>
+                <p>General Physician</p>
+                <p>Available tomorrow</p>
+                <button>Book Appointment</button>
+            </div>
+            <div class="card">
+                <h4>Dr. Surya Prasad</h4>
+                <p>Cardiologist</p>
+                <p>Available tomorrow</p>
+                <button>Book Appointment</button>
+            </div>
+            <div class="card">
+                <h4>Dr. Pawan Sai</h4>
+                <p>Dermatologist</p>
+                <p>Available tomorrow</p>
+                <button>Book Appointment</button>
+            </div>
+            <div class="card">
+                <h4>Dr. Siva Shanker </h4>
+                <p>Opthalmologist</p>
+                <p>Available tomorrow</p>
+                <button>Book Appointment</button>
+            </div>
+        </section>
+
+        <section class="appointments">
+            <h3 id="appointments">Upcoming Appointments</h3>
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Doctor</th>
+                            <th>Specialty</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>1</td>
+                        <td>10th July 2016</td>
+                        <td>10:30 AM</td>
+                        <td>Dr. Anjali Rao</td>
+                        <td>General</td>
+                        <td>Confirmed</td>
+                        <td>Cancel</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>16 August 2016</td>
+                        <td>11:15 AM</td>
+                        <td>Dr. Ravi Kumar</td>
+                        <td>Cardiologist</td>
+                        <td>Pending</td>
+                        <td>Reschedule</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>09 September 2016</td>
+                        <td>03:00 PM</td>
+                        <td>Dr. Siva Shanker</td>
+                        <td>Opthalmologist</td>
+                        <td>Confirmed</td>
+                        <td>Cancel</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        @Clinic Appointment Static Portal by Raghavendra
+    </footer>
+
+</body>
+
+</html>
