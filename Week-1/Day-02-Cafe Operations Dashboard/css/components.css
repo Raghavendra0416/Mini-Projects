@@ -5,6 +5,7 @@ badges,
 and table styling
 */
 
+/* Card */
 .cards-data {
     display: flex;
     flex-direction: column;
@@ -12,17 +13,42 @@ and table styling
 }
 
 
-.overview-cards {
+.cards {
     display: flex;
     gap: 2vw;
 }
 
-.overview-card {
+.card {
     background-color: var(--basic-text-color);
     color: black;
 
     padding: 1rem;
     border: solid 3px black;
     border-radius: 10px;
-    box-shadow: 5px 6px 10px 5px black;
+    box-shadow: 4px 3px 5px black;
+}
+
+/* Table */
+.table-data>h3 {
+    margin: 1rem;
+}
+
+table {
+    padding: 10px;
+    margin-left: 2rem;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 3px solid black;
+}
+
+th {
+    padding: 0.6rem;
+}
+
+td {
+    padding: 1rem;
 }
