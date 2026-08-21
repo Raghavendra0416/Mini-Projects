@@ -71,48 +71,60 @@ I have used claude, gemini But they are giving incorrect styling. So after somet
 ## Daily Notes Template
 
 ### What I built
-
-Write here.
+About:
+- I have Build an Clinic Appointment Portal Webpage and this page is static.
+- This Page is for learning Purpose. 
+- The goal is to make the page responsive.
+What it consists?
+- It consists of navbar, cards, table.
 
 ### What I built without assistance
-
-Write here.
+- I have build HTML Structure, Cards, basic CSS styling, Grid styling, Media Queries(took small help from AI).
 
 ### What helped me
-
-Write here.
+- I have used AI(Codex).
+- There was an issue. The page is scrollng horizantlly for mobiles. So, I have used AI for it.
 
 ### One concept I can now explain
-
-Write here.
+I can Explain:
+- Deatils & Summary Tags
+- Media Queries
+- GRID
+- Table
+- Overflow
 
 ### One concept still unclear
-
-Write here.
+What i still need to work on?
+- GRID - As it has many properties inside it.
+- Overflow
 
 ### Bug or confusion
+Confusion:
+- While using details and summary tags, i was confused how to use that as navbar.
+Bug:
+- Not able to resolve the horizantal page scrolling issue. 
 
-Write here.
 
 ### Root cause or next experiment
-
-Write here.
+The Reason of the Issue:
+- The Table is causing the page to scroll horizantally.
+Resolution:
+- Added overflow-x:hidden; in the body.
+- Added `width: max-content` and `min-width: 100%` on table.
 
 ### Prevention or test
-
-Write here.
+- To prevent horizantal scrolling, the Body styling should be:
+width:100%;
+overflow-x:hidden;
 
 ### Weakest interview answer
-
-Write here.
+The Weakest Interview answer will be on Overflow.
 
 ### Tomorrow’s first action
-
-Write here.
+Work on Next Day project.
 
 ### Daily status
-
-Green / Amber / Red
+Green 
 
 ------------
 ### RCA by AI
