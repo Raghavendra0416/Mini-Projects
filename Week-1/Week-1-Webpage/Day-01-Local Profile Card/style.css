@@ -49,18 +49,12 @@ body {
     padding: 1rem;
 }
 
-.card__titile {}
-
-.card__role {}
-
-.card__description {}
-
 
 .extra__text {
     display: none;
 }
 
-.extra__tasks {
+.extra__skills {
     display: none;
 }
 
@@ -97,4 +91,16 @@ input[type="checkbox"]:checked~label::before {
 
 .card__description:has(input[type="checkbox"]:checked) .extra__text {
     display: inline;
+}
+
+.card__skills:has(input[type="checkbox"]:checked) .extra__skills {
+    display: list-item;
+}
+
+.readmore_skills {
+    margin-left: 1rem;
+}
+
+.contact_user {
+    text-align: center;
 }
