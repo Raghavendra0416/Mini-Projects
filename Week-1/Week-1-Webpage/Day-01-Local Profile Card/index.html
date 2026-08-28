@@ -48,27 +48,28 @@
 
             <h3>Skills</h3>
             <div class="card__skills">
+                <input type="checkbox" name="read-more-skills" id="read-more-skills">
+
                 <ul>
                     <li> <b>Frontend:</b> React.js, JavaScript (ES6+), HTML5, CSS3</li>
-                    <li><b>State Management:</b> Redux, Redux Toolkit (RTK), RTK Query</li>
+                    <li><b>State Management:</b> Redux, Redux Toolkit (RTK), RTK Query
+                        <label class="label--inline" for="read-more-skills"></label>
+                    </li>
                     <li class="extra__skills"><b>API Integration:</b> REST APIs, asynchronous operations, JSON</li>
                     <li class="extra__skills"><b>UI Development:</b> Responsive design, reusable components, CSS
                         Flexbox, Grid</li>
-                    <li class="extra__skills"><b>Development Practices:</b> Component-based architecture, form handling,
-                        error handling,
+                    <li class="extra__skills"><b>Development Practices:</b> Component-based architecture, form
+                        handling, error handling,
                         debugging</li>
                     <li class="extra__skills"><b>Tools:</b> Git, GitHub, VS Code, Chrome DevTools</li>
                     <li class="extra__skills"><b>Other:</b> Agile/Scrum, code reviews, defect fixing, performance
                         optimization</li>
                 </ul>
 
-                <div class="readmore_skills">
-                    <input type="checkbox" name="read-more-skills" id="read-more-skills">
-                    <label for="read-more-skills"></label>
-                </div>
-
-                <a class="card__link" href="/" class="contact_user">Contact Raghavendra</a>
+                <label class="label--end" for="read-more-skills"></label>
             </div>
+
+            <a class="card__link contact_user" href="/">Contact Raghavendra</a>
         </div>
     </article>
 </body>

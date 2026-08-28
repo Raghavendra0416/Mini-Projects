@@ -19,36 +19,50 @@ body {
     color: var(--text-color);
 
     width: 100%;
-    height: 100dvh;
+    min-height: 100dvh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 
 /* Actual Styling */
 .card {
     height: auto;
-    width: 450px;
+    width: 100%;
+    max-width: 450px;
     border: 1px solid black;
-    border-radius: 20px;
+    border-radius: clamp(10px, 3vw, 20px);
     box-shadow: 1rem 1rem 1rem black;
 
-    overflow: hidden;
+    overflow: auto;
 }
 
 .card__image {
     height: auto;
     width: 100%;
-
-    object-fit: fill;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 .card__body {
-    padding: 1rem;
+    padding: clamp(0.75rem, 3vw, 1.5rem);
 }
 
+.card__title {
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+}
+
+.card__role {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+}
+
+h3 {
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+}
 
 .extra__text {
     display: none;
@@ -62,6 +76,13 @@ p {
     display: inline;
 }
 
+ul {
+    padding-left: 1.2rem;
+}
+
+li {
+    display: list-item;
+}
 
 label {
     color: rgba(4, 16, 244, 0.918);
@@ -93,14 +114,42 @@ input[type="checkbox"]:checked~label::before {
     display: inline;
 }
 
-.card__skills:has(input[type="checkbox"]:checked) .extra__skills {
+/* Skills read more / read less */
+.card__skills input[type="checkbox"] {
+    display: none;
+}
+
+.card__skills .label--end {
+    display: none;
+    margin-left: 1rem;
+}
+
+.card__skills:has(input:checked) .label--inline {
+    display: none;
+}
+
+.card__skills:has(input:checked) .label--end {
+    display: inline-block;
+}
+
+.card__skills:has(input:checked) .extra__skills {
     display: list-item;
 }
 
-.readmore_skills {
-    margin-left: 1rem;
+.card__link {
+    display: block;
+    margin-top: 1rem;
+    color: var(--text-color);
+    text-decoration: underline;
 }
 
 .contact_user {
     text-align: center;
+    color: blue;
+    opacity: 50%;
+}
+
+.contact_user:hover {
+    opacity: 100%;
+    cursor: pointer;
 }
