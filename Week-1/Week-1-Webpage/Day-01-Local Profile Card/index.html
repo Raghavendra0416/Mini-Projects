@@ -4,28 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Profile Card</title>\
+    <title>Local Profile Card</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div>
-        <article class="card">
-            <img class="card__image" src="./assets/hero-imge.jpg" alt="Description of image">
+    <article class="card">
+        <img class="card__image" src="./assets/hero-imge.jpg" alt="hero-image">
 
-            <div class="card__body">
-                <h2 class="card__title">Swaroop Raghavendra</h2>
-                <p class="card__role">Junior Frontend Developer</p>
+        <div class="card__body">
+            <h2 class="card__title">Swaroop Raghavendra</h2>
+            <p class="card__role">Junior Frontend Developer</p>
 
-                <h3>About</h3>
-                <div class="card__description">
-                    <p class="card__meta">Posted on <time datetime="2026-08-25">Aug 25, 2026</time></p>
-                    <p>A Frontend Developer with around 4 years of overall experience, including experience in RPA and
-                        frontend development. I
-                        specialize in React.js, JavaScript, HTML, CSS, Redux/RTK, and REST API integration, with a
-                        strong
-                        focus on building
-                        responsive and user-friendly web applications.</p>
+            <h3>About</h3>
+            <div class="card__description">
+                <p class="card__meta">Posted on <time datetime="2026-08-25">Aug 25, 2026</time></p>
+                <p>A Frontend Developer with around 4 years of overall experience, including experience in RPA and
+                    frontend development
+                    <span class="dots">...</span>
+                </p>
+
+                <span class="extra__text">
+                    specialize in React.js, JavaScript, HTML, CSS, Redux/RTK, and REST API integration, with a
+                    strong focus on building responsive and user-friendly web applications.
                     <p>Currently, I work on an e-commerce application, developing features such as product listings,
                         product
                         details, shopping
@@ -34,26 +35,38 @@
                         UI components,
                         managing application state, integrating APIs, fixing issues, and improving application
                         performance
-                        and user experience.</p>
-                </div>
+                        and user experience.
+                    </p>
+                </span>
+
+                <span>
+                    <input type="checkbox" name="read-more" id="read-more">
+                    <label for="read-more"></label>
+                </span>
+            </div>
 
 
-                <h3>Skills</h3>
-                <ul>
-                    <li> <b>Frontend:</b> React.js, JavaScript (ES6+), HTML5, CSS3</li>
-                    <li><b>State Management:</b> Redux, Redux Toolkit (RTK), RTK Query</li>
+            <h3>Skills</h3>
+            <ul>
+                <li> <b>Frontend:</b> React.js, JavaScript (ES6+), HTML5, CSS3</li>
+                <li><b>State Management:</b> Redux, Redux Toolkit (RTK), RTK Query</li>
+                <span class="extra__skills">
                     <li><b>API Integration:</b> REST APIs, asynchronous operations, JSON</li>
                     <li><b>UI Development:</b> Responsive design, reusable components, CSS Flexbox, Grid</li>
                     <li><b>Development Practices:</b> Component-based architecture, form handling, error handling,
                         debugging</li>
                     <li><b>Tools:</b> Git, GitHub, VS Code, Chrome DevTools</li>
                     <li><b>Other:</b> Agile/Scrum, code reviews, defect fixing, performance optimization</li>
-                </ul>
+                </span>
+            </ul>
 
-                <a class="card__link" href="/">Contact Raghavendra</a>
-            </div>
-        </article>
-    </div>
+            <span>
+                <input type="checkbox" name="read-more" id="read-more">
+                <label for="read-more"></label>
+            </span>
+            <a class="card__link" href="/">Contact Raghavendra</a>
+        </div>
+    </article>
 </body>
 
 </html>
