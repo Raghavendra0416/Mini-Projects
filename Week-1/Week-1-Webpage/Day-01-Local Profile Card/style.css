@@ -11,7 +11,6 @@
     --background-color: rgba(110, 106, 106, 0.774);
     --text-color: azure;
     --common-padding: 1%;
-    --font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
 }
 
 body {
@@ -62,6 +61,12 @@ body {
 h3 {
     margin-top: 0.75rem;
     margin-bottom: 0.25rem;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+}
+
+p,
+li {
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .extra__text {
