@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: black;
+            color: beige;
+            width: fit-content;
+        }
+
+        button {
+            margin-top: 20px;
+            margin-left: 80%;
+            padding: 0.3rem;
+            border-radius: 10px;
+            font-size: medium;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="myForm">
+
+        <fieldset>
+            <legend>Profile</legend>
+
+            <label for="username">Full Name</label>
+            <input type="text" id="username" name="username" value="username">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" value="email">
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Notifications</legend>
+
+            <label>
+                <input type=" checkbox" name="notifications" value="email">
+                Email Notifications
+            </label>
+
+            <label>
+                <input type="checkbox" name="notifications" value="push">
+                Push Notifications
+            </label>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Security</legend>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" value="password">
+        </fieldset>
+
+        <fieldset>
+            <legend>Choose a payment method</legend>
+
+            <label>
+                <input type="radio" name="payment" value="card">
+                Credit Card
+            </label>
+
+            <label>
+                <input type="radio" name="payment" value="upi">
+                UPI
+            </label>
+
+            <label>
+                <input type="radio" name="payment" value="cod">
+                Cash on Delivery
+            </label>
+        </fieldset>
+
+        <button>Submit</button>
+    </form>
+
+
+    <!-- 1. ADDED 'defer' so the script waits for the HTML to load first -->
+    <script defer>
+        // This function will fetch data whenever you call it
+        function logFormData() {
+            const myForm = document.getElementById('myForm');
+
+            // 2. These now work because the inputs have 'name' attributes
+            const username = myForm.elements['username'].value;
+            const email = myForm.elements['email'].value;
+            const password = myForm.elements['password'].value;
+            const payment = myForm.elements['payment'].value; // Gets the selected radio value
+
+            console.log({ username, email, password, payment });
+        }
+
+        // Running it immediately on page load (it will be empty at first)
+        // You can call logFormData() in your browser console anytime to read the current values!
+        window.addEventListener('DOMContentLoaded', () => {
+            logFormData();
+        });
+    </script>
+</body>
+
+</html>
