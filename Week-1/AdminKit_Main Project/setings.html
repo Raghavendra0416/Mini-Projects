@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Kit</title>
+    <link rel="stylesheet" href="./styles/tokens.css">
+    <link rel="stylesheet" href="./styles/base.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <form action="#" method="get">
+            <fieldset>
+                <legend>Settings</legend>
+                <p>Configure which queue and date range you want to view.</p>
+
+                <div>
+                    <label for="queue">Queue</label>
+                    <select id="queue" name="queue">
+                        <option value="">Select queue</option>
+                        <option value="support">Support Queue</option>
+                        <option value="priority">Priority Queue</option>
+                        <option value="general">General Queue</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="start-date">Start Date</label>
+                    <input type="date" id="start-date">
+                </div>
+
+                <div>
+                    <label for="end-date">End Date</label>
+                    <input type="date" id="end-date">
+                </div>
+
+                <button type="submit">Apply</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

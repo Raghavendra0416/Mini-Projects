@@ -1,7 +1,21 @@
 /* Type and spacing custom properties only */
+/* reusable design values */
 :root {
+    --color-text: #e3e5e8;
+    --color-text-muted: #9a9ea5;
+    --color-background: #0f1010;
+    --color-surface: #18191c;
+
+    --color-border: #2b2e33;
+    --color-accent: #e8a33d;
+    --color-focus: #f2b955;
+
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+
+    --radius-sm: 3px;
+    --radius-md: 4px;
+
     --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 2rem;
 }
