@@ -2,12 +2,10 @@ body {
     background-color: black;
     color: beige;
 
-    /* Structural fixes */
     margin: 0;
     width: 100%;
     min-height: 100dvh;
 
-    /* Flexbox centering */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,22 +13,180 @@ body {
 
 fieldset {
     padding: 1rem;
+    border: 1px solid beige;
+    box-shadow: 10px 10px beige;
 
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
-.name-email {
-    display: flex;
-    gap: 1rem;
-}
-
-.diff-inputs {
+.group {
     display: flex;
     flex-direction: column;
+    gap: 0.75rem;
 }
 
-.expirence-dietary {
+.row {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+.field input,
+.field select,
+.field textarea {
+    background: #1a1a1a;
+    color: beige;
+    border: 1px solid beige;
+    padding: 0.4rem;
+    font: inherit;
+}
+
+.radios {
+    gap: 1.5rem;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+    outline: 2px solid #ffd54f;
+    outline-offset: 2px;
+}
+
+.radios label:focus-within,
+.checkbox:focus-within {
+    outline: 2px solid #ffd54f;
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+.hint {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+
+.btns button {
+    background: beige;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font: inherit;
+}
+
+.btns button:hover {
+    opacity: 0.85;
+}
+
+body {
+    background-color: black;
+    color: beige;
+
+    margin: 0;
+    width: 100%;
+    min-height: 100dvh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset {
+    padding: 1rem;
+    border: 1px solid beige;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+.field input,
+.field select,
+.field textarea {
+    background: #1a1a1a;
+    color: beige;
+    border: 1px solid beige;
+    padding: 0.4rem;
+    font: inherit;
+}
+
+.radios {
+    gap: 1.5rem;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+    outline: 2px solid #ffd54f;
+    outline-offset: 2px;
+}
+
+.radios label:focus-within,
+.checkbox:focus-within {
+    outline: 2px solid #ffd54f;
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+.hint {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+
+.btns button {
+    background: beige;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font: inherit;
+}
+
+.btns button:hover {
+    opacity: 0.85;
 }
