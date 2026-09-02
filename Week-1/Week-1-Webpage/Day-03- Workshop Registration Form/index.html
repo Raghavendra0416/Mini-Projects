@@ -4,105 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-        body {
-            background-color: black;
-            color: beige;
-            width: fit-content;
-        }
-
-        button {
-            margin-top: 20px;
-            margin-left: 80%;
-            padding: 0.3rem;
-            border-radius: 10px;
-            font-size: medium;
-        }
-    </style>
+    <title>Regestration Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <form id="myForm">
-
+    <form>
         <fieldset>
-            <legend>Profile</legend>
+            <legend>Register for the weekend workshop</legend>
 
-            <label for="username">Full Name</label>
-            <input type="text" id="username" name="username" value="username">
+            <div class="contact-details">
+                <h3>Contact Details</h3>
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" value="email">
+                <div class="name-email">
+                    <div>
+                        <label for="name">Full Name:</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email">
+                    </div>
+                </div>
+
+                <p>We will send your booking here.</p>
+            </div>
+
+
+
+            <div class="session">
+                <h3>Choose a session</h3>
+                <div class="diff-inputs">
+                    <div>
+                        <input type="radio" id="saturday">
+                        <label for="saturday">Saturday</label>
+
+                        <input type="radio" id="sunday">
+                        <label for="sunday">Sunday</label>
+                    </div>
+
+                    <div class="expirence-dietary">
+                        <div>
+                            <label for="expirence">Expirence</label>
+                            <select name="expirence" id="expirence">
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="expirenced">Expirenced</option>
+                            </select>
+                        </div>
+
+
+                        <div>
+                            <label for="dietary">Dietary notes</label>
+                            <textarea name="dietary" id="dietary">Please Enter text here...</textarea>
+                        </div>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="terms" id="terms">
+                        <label for="terms">I agree to the terms</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="btns">
+                <button type="submit">Register</button>
+                <button>Reset</button>
+            </div>
         </fieldset>
-
-
-        <fieldset>
-            <legend>Notifications</legend>
-
-            <label>
-                <input type=" checkbox" name="notifications" value="email">
-                Email Notifications
-            </label>
-
-            <label>
-                <input type="checkbox" name="notifications" value="push">
-                Push Notifications
-            </label>
-        </fieldset>
-
-
-        <fieldset>
-            <legend>Security</legend>
-
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" value="password">
-        </fieldset>
-
-        <fieldset>
-            <legend>Choose a payment method</legend>
-
-            <label>
-                <input type="radio" name="payment" value="card">
-                Credit Card
-            </label>
-
-            <label>
-                <input type="radio" name="payment" value="upi">
-                UPI
-            </label>
-
-            <label>
-                <input type="radio" name="payment" value="cod">
-                Cash on Delivery
-            </label>
-        </fieldset>
-
-        <button>Submit</button>
     </form>
-
-
-    <!-- 1. ADDED 'defer' so the script waits for the HTML to load first -->
-    <script defer>
-        // This function will fetch data whenever you call it
-        function logFormData() {
-            const myForm = document.getElementById('myForm');
-
-            // 2. These now work because the inputs have 'name' attributes
-            const username = myForm.elements['username'].value;
-            const email = myForm.elements['email'].value;
-            const password = myForm.elements['password'].value;
-            const payment = myForm.elements['payment'].value; // Gets the selected radio value
-
-            console.log({ username, email, password, payment });
-        }
-
-        // Running it immediately on page load (it will be empty at first)
-        // You can call logFormData() in your browser console anytime to read the current values!
-        window.addEventListener('DOMContentLoaded', () => {
-            logFormData();
-        });
-    </script>
 </body>
 
 </html>
