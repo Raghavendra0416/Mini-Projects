@@ -10,12 +10,19 @@
     --color-accent: #e8a33d;
     --color-focus: #f2b955;
 
+    --color-positive: #4ade80;
+    --color-negative: #f87171;
+
+    --border-thick: 3px solid rgb(15, 91, 94);
+    --shadow-card: 1px 1px rgb(35, 84, 86);
+
     --space-sm: 0.5rem;
     --space-md: 1rem;
     --space-lg: 2rem;
 
     --radius-sm: 3px;
     --radius-md: 4px;
+    --radius-lg: 12px;
 
     --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
