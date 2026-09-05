@@ -4,14 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Kit</title>
+    <title>Admin Kit — Settings</title>
     <link rel="stylesheet" href="./styles/token.css">
     <link rel="stylesheet" href="./styles/base.css">
 </head>
 
 <body class="registration-page">
-    <div class="form-container">
-        <h1>Settings</h1>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <h1 class="main-title"><a href="/">Admin Kit</a></h1>
+        <nav aria-label="Primary navigation">
+            <ul class="nav-links">
+                <li><a href="index.html#dashboard">Dashboard</a></li>
+                <li><a href="index.html#metrics">Metrics</a></li>
+                <li><a href="index.html#activity">Activity</a></li>
+                <li><a href="./settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="form-container">
+        <h2>Settings</h2>
         <form action="#" method="get">
             <fieldset>
                 <legend>Configure view</legend>
@@ -28,19 +41,19 @@
                 </div>
 
                 <div>
-                    <label for="start-date">Start Date</label>
+                    <label for="start-date">Start date</label>
                     <input type="date" id="start-date">
                 </div>
 
                 <div>
-                    <label for="end-date">End Date</label>
+                    <label for="end-date">End date</label>
                     <input type="date" id="end-date">
                 </div>
 
                 <button type="submit">Apply</button>
             </fieldset>
         </form>
-    </div>
+    </main>
 </body>
 
 </html>
