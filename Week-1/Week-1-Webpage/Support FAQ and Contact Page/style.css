@@ -1,0 +1,62 @@
+:root {
+    --background-color: black;
+    --text-color: rgb(197, 224, 224);
+
+    --space-md: 1rem;
+    --space-sm: 0.5rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+
+    width: 10dw;
+}
+
+/* Header */
+header {
+    background-color: rgba(137, 136, 136, 0.669);
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    margin-left: var(--space-sm);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:hover {
+    color: rgb(91, 167, 194);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links>a {
+    margin: var(--space-md);
+}
+
+/* Main */
+main {
+    margin: var(--space-md);
+}

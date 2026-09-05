@@ -10,18 +10,17 @@
 
 <body>
     <header>
-        <h1>Help Centre</h1>
+        <h1><a href="index.html">Help Centre</a></h1>
         <nav class="nav-links">
-            <a href="#">Questions</a>
-            <a href="#">Contact</a>
-            <a href="#">Options</a>
+            <a href="#questions">Questions</a>
+            <a href="#contact">Contact</a>
+            <a href="#hours">Hours</a>
         </nav>
     </header>
 
     <main>
-        <h2>Frequently asked questions</h2>
-
-        <section>
+        <section id="questions">
+            <h2>Frequently asked questions</h2>
             <details>
                 <summary>How do I reset my password?</summary>
                 <p>
@@ -70,26 +69,72 @@
             </details>
         </section>
 
-        <section>
+        <section id="Contact">
+            <h2>Contact Us</h2>
+
+            <div class="container">
+                <div class="card">
+                    <p>Email within 1 day</p>
+                </div>
+                <div class="card">
+                    <p>Phone Availability - 9AM to 5PM</p>
+                    <p></p>
+                </div>
+                <div class="card">
+                    <p>Community Peer Answers</p>
+                </div>
+            </div>
+
+            <div>
+                <p>
+                    <b>Mailing Address:</b>
+                    Example Corp, Attn: Support Ops, 4th Floor, Building C, 125 North Harbor Business Park Ave,
+                    Suite 4400, Springfield, IL 62704, USA
+                </p>
+            </div>
+        </section>
+
+        <section id="hours">
+            <h2>Support Hours</h2>
+
             <table>
+                <caption>Support availability</caption>
+
                 <thead>
                     <tr>
-                        <th>Email Support</th>
+                        <th>Day</th>
+                        <th>Email</th>
                         <th>Phone</th>
-                        <th>Community</th>
+                        <th>Forum</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr>
-                        <td>Within 1day</td>
-                        <td>9 to 5</td>
-                        <td>peers answers</td>
+                        <td>Mon-Fri</td>
+                        <td>24hr</td>
+                        <td>9AM - 5PM</td>
+                        <td>24hrs</td>
+                    </tr>
+
+                    <tr>
+                        <td>Sat/Sun</td>
+                        <td>24hr</td>
+                        <td>Closed</td>
+                        <td>24hrs</td>
                     </tr>
                 </tbody>
             </table>
         </section>
+
+        <section>
+            <p>No-hours message: "No live phone support on weekends — email or forum instead"</p>
+        </section>
     </main>
+
+    <footer>
+        <p>@Created By Tempest for Learning Purpose</p>
+    </footer>
 </body>
 
 </html>
