@@ -1,1 +1,154 @@
-/* no need for this file */
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    border: 2px solid white;
+    padding: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.main-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    padding: var(--space-sm);
+
+    display: flex;
+    gap: var(--space-md);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+/* Main */
+/* Page-heading */
+.page-heading {
+    padding: var(--space-md);
+}
+
+.page-heading>p {
+    margin-left: 0.5rem;
+}
+
+/* Metrics */
+#metrics {
+    padding: var(--space-md);
+}
+
+.kpi-cards {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    padding: var(--space-md);
+    margin-top: 0.8rem;
+    width: 80%;
+    border-radius: 20px;
+}
+
+.kpi-card {
+    padding: var(--space-md);
+    border: 3px solid rgb(15, 91, 94);
+    border-radius: 20px;
+    box-shadow: 1px 1px rgb(35, 84, 86);
+    background-color: cadetblue;
+
+    text-align: center;
+
+    transition-property: transform;
+    transition-timing-function: ease;
+    transition-duration: 100ms;
+}
+
+.kpi-card:hover {
+    transform: scale(0.9);
+}
+
+.kpi-card>p {
+    font-size: smaller;
+}
+
+.kpi-card>:nth-child(2) {
+    font-size: x-large;
+}
+
+.kpi-card>:nth-child(3) {
+    font-size: small;
+}
+
+.active>:nth-child(3) {
+    color: greenyellow;
+}
+
+.response>:nth-child(3) {
+    color: brown;
+}
+
+.revenue>:nth-child(3) {
+    color: greenyellow;
+}
+
+.failed>:nth-child(3) {
+    color: bisque;
+}
+
+/* Recent Activity */
+#activity {
+    padding: var(--space-md);
+}
+
+table {
+    padding: var(--space-md);
+}
+
+thead,
+tbody,
+th,
+tr,
+td {
+    border: 1px solid white;
+    padding: var(--space-sm);
+}
+
+/* queue-health */
+#queue-health {
+
+    padding: var(--space-md);
+}
+
+#queue-health>h2 {
+    margin-bottom: 1rem;
+}
+
+.health-row {
+    padding: var(--space-sm);
+    /* border: 1px solid white; */
+    width: 70%;
+    margin-left: 1rem;
+    margin-top: 0.3rem;
+
+    display: flex;
+    gap: var(--space-md);
+    justify-content: space-between;
+    border: 1px solid white;
+}
+
+/* Footer */
+footer {
+    font-size: small;
+
+    padding: 0.7rem;
+    /* border: 1px solid white; */
+    text-align: center;
+}

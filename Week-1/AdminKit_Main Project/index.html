@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Kit</title>
-    <link rel="stylesheet" href="./styles/tokens.css">
+    <link rel="stylesheet" href="./styles/token.css">
     <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/dashboard.css">
 </head>
 
-<body>
+<body class="dashboard-page">
     <header>
-        <a href="/">Admin Kit</a>
+        <a href="/" class="main-title">Admin Kit</a>
         <nav aria-label="Primary navigation">
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#dashboard">Dashboard</a></li>
                 <li><a href="#metrics">Metrics</a></li>
                 <li><a href="#activity">Activity</a></li>
@@ -23,16 +24,127 @@
     </header>
 
     <main>
-        <h1>Dashboard Overview</h1>
+        <section class="page-heading">
+            <h2>Dashboard Overview</h2>
+            <p>Daily support overview</p>
+            <p>What Maya needs before the morning stand-up</p>
+        </section>
 
         <section id="metrics">
             <h2>Metrics</h2>
+
+            <div class="kpi-cards">
+                <div class="kpi-card active">
+                    <p>Active tickets</p>
+                    <p>1,204</p>
+                    <p id="">↓ Down 8% from last week</p>
+                </div>
+
+                <div class="kpi-card response">
+                    <p>Avg response time</p>
+                    <p>4h 12m</p>
+                    <p>↑ Up 22 min from last week</p>
+                </div>
+
+                <div class="kpi-card revenue">
+                    <p>Monthly recurring revenue</p>
+                    <p>$482,930</p>
+                    <p>↑ Up 3.4% from last month</p>
+                </div>
+
+                <div class="kpi-card failed">
+                    <p>Failed webhooks, 24h</p>
+                    <p>37</p>
+                    <p>→ Flat since yesterday</p>
+                </div>
+            </div>
         </section>
 
         <section id="activity">
             <h2>Recent Activity</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ticket</th>
+                        <th>Customer</th>
+                        <th>Category</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>#1842</td>
+                        <td>Acme</td>
+                        <td>Login</td>
+                        <td>Open</td>
+                    </tr>
+
+                    <tr>
+                        <td>#1841</td>
+                        <td>North Co</td>
+                        <td>Billing</td>
+                        <td>Waiting</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="queue-health">
+            <h2>Queue Health</h2>
+
+            <div class="health-row">
+                <span>email-notifications-outbound</span>
+
+                <span>
+                    <span>142</span>
+                    <span>messages waiting</span>
+                </span>
+
+                <span class="progress-meter">
+                    <label for="healthy">Healthy</label>
+                    <meter id="healthy" min="0" max="200" value="142">142 out of 200</meter>
+                </span>
+            </div>
+
+            <div class="health-row">
+                <span>payment-webhook-retries</span>
+
+                <span>
+                    <span>2,318</span>
+                    <span>messages waiting</span>
+                </span>
+
+                <span>Backing up</span>
+            </div>
+
+            <div class="health-row">
+                <span>image-thumbnail-generation</span>
+
+                <span>
+                    <span>9</span>
+                    <span>messages waiting</span>
+                </span>
+
+                <span>Working</span>
+            </div>
+
+            <div class="health-row">
+                <span>fraud-review-escalations</span>
+
+                <span>
+                    <span>64</span>
+                    <span>messages waiting</span>
+                </span>
+
+                <span>Stalled -- 47Min</span>
+            </div>
         </section>
     </main>
+
+    <footer>
+        @created By Tempest for Learning Purpose
+    </footer>
 </body>
 
 </html>
