@@ -4,38 +4,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            font-family: sans-serif;
-        }
-
-        .container>div {
-            border-radius: 5px;
-            padding: 10px;
-            background-color: rgb(207 232 220);
-            border: 2px solid rgb(79 185 227);
-        }
-
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            grid-auto-rows: minmax(50px, auto);
-            gap: 20px;
-        }
-    </style>
+    <title>Responsive Community Event Schedule</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <div>One</div>
-        <div>Two</div>
-        <div>Three</div>
-        <div>Four<br />More content</div>
-        <div>Five</div>
-        <div>Six</div>
-        <div>Seven</div>
-    </div>
+    <header>
+        <h1>Static Responsive Community Event Schedule</h1>
+    </header>
+
+    <main>
+        <section class="cards">
+            <h2>Events</h2>
+            <div class="container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <h3>Wedding</h3>
+                    <div class="timings">
+                        <span>10:00 AM IST</span>
+                        <span>Monday | 14th | January | 2026</span>
+                    </div>
+
+                    <p>
+                        <i><b>Funny Quote:</b></i> Marriage is finding that one special person you want to annoy for the
+                        rest of your life
+                    </p>
+
+                    <div class="couple-details">
+                        <p><i><b>Groom:</b></i> Sanjay Yadav</p>
+                        <p><i><b>Bride:</b></i> Anushka Shrama</p>
+                    </div>
+
+                    <p><i><b>Venue:</b></i> Sri Kalyana Mandapam | Hall A</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <h3>Recepetion</h3>
+                    <div class="timings">
+                        <span>3:30 PM IST</span>
+                        <span>Tuesday | 15th | January | 2026</span>
+                    </div>
+
+                    <p>
+                        <i><b>Funny Quote:</b></i> It's so great to find that one special person you want to annoy
+                        for the rest of your life.
+                    </p>
+
+                    <div class="couple-details">
+                        <p><i><b>Groom:</b></i> Kumar Varma</p>
+                        <p><i><b>Bride:</b></i> Hari Priya</p>
+                    </div>
+
+                    <p><i><b>Venue:</b></i> Sri Kalyana Mandapam | Hall C</p>
+                </div>
+            </div>
+        </section>
+
+        <article class="hall-details">
+            <h2>Sri Kalyana Mandapam Convention Hall Mandapam Details</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Date</th>
+                        <th>Session</th>
+                        <th>Booked By</th>
+                        <th>Hall</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>11:00 AM</td>
+                        <td>Mon Jan 2026</td>
+                        <td>Wedding</td>
+                        <td>Uday Kumar</td>
+                        <td>Hall A</td>
+                    </tr>
+
+                    <tr>
+                        <td>1:30 PM</td>
+                        <td>Wed Jan 2026</td>
+                        <td>Engagement</td>
+                        <td>Shivani Sharma</td>
+                        <td>Hall D</td>
+                    </tr>
+
+                    <tr>
+                        <td>4:50 AM</td>
+                        <td>Sun Feb 2026</td>
+                        <td>Reception</td>
+                        <td>Durga Devi</td>
+                        <td>Hall B</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <section class="description">
+            <h2>Sri Kalyana Mandapam Convention Hall</h2>
+            <p>
+                Our Convention Hall is a premier events venue located in Morampudi, Rajamahendravaram, designed to host
+                large-scale gatherings like weddings, corporate conferences, and cultural celebrations. The fully
+                air-conditioned facility comfortably accommodates 800 to 1,000 guests and features an average booking
+                price of ₹1,50,000 per day. The venue is equipped with a modern kitchen, a dedicated dining area,
+                advanced audio-visual systems, and private VIP suites, alongside a spacious parking lot that
+                accommodates 100 to 200 vehicles with dedicated security.
+            </p>
+            <p>
+                If you are planning an event, I can help you write a tailored description. Let me know:
+            </p>
+            <ul>
+                <li>What type of event are you hosting (wedding, exhibition, conference)?</li>
+                <li>What is the exact location or city you want to highlight?</li>
+                <li>Are there any special amenities (like catering or lawns) you want to include?</li>
+            </ul>
+            <p><a href="#">Contact Us</a> for Booking Hall</p>
+        </section>
+    </main>
 </body>
 
 </html>

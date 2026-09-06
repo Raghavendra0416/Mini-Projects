@@ -17,6 +17,17 @@ At Wider Width:
 - Ensure that text doesn't overlap, clip awkwardly, or stretch the page layout when a title or name is too long.
 - Use table for one card.
 
+### Boundary cases to trigger
+- Two sessions share a start time
+- Title is 80 characters
+- Viewport is 320 px
+- Zoom is 200%
+
+### Constraints
+- No device-name breakpoints such as iPhone
+- No fixed heights
+- No horizontal page scroll
+
 ### How does the layout Look:
 - Follow Mobile 1st Approach.
 - It should only conatin cards.
@@ -28,5 +39,4 @@ At Wider Width:
 ### Why am i building the layout like this?
 Because Each card contains different information and will be having different screen sizes.
 So when Cards are of differnt screen sizes and needs to be responsive, it is hard to control them like: overflowing of text, aligning of text, sizes of text, controlling the data inside the card, also making the data inside the card responsive, controlling overflow.
-
-By Doing all this makes better practice.
+**By Doing all this makes better practice.**
