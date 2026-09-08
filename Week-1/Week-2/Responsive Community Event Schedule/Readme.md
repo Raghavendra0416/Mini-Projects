@@ -40,3 +40,16 @@ At Wider Width:
 Because Each card contains different information and will be having different screen sizes.
 So when Cards are of differnt screen sizes and needs to be responsive, it is hard to control them like: overflowing of text, aligning of text, sizes of text, controlling the data inside the card, also making the data inside the card responsive, controlling overflow.
 **By Doing all this makes better practice.**
+
+
+
+------------------------------------------------------------------------
+## What is left to do?
+- Add 3 more cards inside the Events.
+- Use Grid inside the container and control the responsiveness for different screens.
+
+As suggested for cards:
+- Start with 1 column for narrow layout.
+- took space as per content for wider screens.
+
+- Adjust the cards content inside correctly.
