@@ -146,6 +146,8 @@
     /* queue-health */
     #queue-health {
         padding: var(--space-md);
+
+        overflow-x: auto;
     }
 
     #queue-health>h2 {
@@ -155,7 +157,7 @@
     .health-row {
         padding: var(--space-sm);
         /* border: 1px solid white; */
-        width: 100%;
+        width: fit-content;
         margin-left: 1rem;
         margin-top: 0.3rem;
 
@@ -163,6 +165,18 @@
         gap: var(--space-md);
         justify-content: space-between;
         border: 1px solid white;
+
+        text-wrap-mode: nowrap;
+
+    }
+
+    .links {
+        color: blue;
+        text-decoration: underline;
+    }
+
+    .links::after {
+        content: "↗";
     }
 
     /* Footer */
