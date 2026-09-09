@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Account Preference</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="skip-link">
+        <a href="#main">Skip to Content</a>
+    </div>
+    <header>
+        <h1>Accessible Account Preference Static</h1>
+    </header>
+
+    <main id="main">
+        <form>
+            <fieldset>
+                <legend>Account Preferences</legend>
+
+                <div class="notification">
+                    <h3>Notifications</h3>
+                    <input type="checkbox" name="updates" id="updates" aria-describedby="updates checkbox"
+                        class="focus-ele">
+                    <label for="updates" title="checkbox for updates">
+                        Product Updates
+                    </label>
+
+                    <input type="checkbox" name="alerts" id="alerts">
+                    <label for="alerts" title="checkbox for alerts" class="focus-ele">Securty Alerts</label>
+                </div>
+
+                <div class="contact">
+                    <h3>Preffered Contact*</h3>
+
+                    <input type="radio" name="contact" id="email" aria-describedby="updates checkbox">
+                    <label for="email" title="select preffered contact" class="focus-ele">Email</label>
+
+                    <input type="radio" name="contact" id="sms" aria-describedby="updates checkbox">
+                    <label for="sms" title="select preffered contact" class="focus-ele">SMS</label>
+
+                    <input type="radio" name="contact" id="none" aria-describedby="updates checkbox">
+                    <label for="none" title="select preffered contact" class="focus-ele">None</label>
+                </div>
+
+                <div class="privacy-checkbox">
+                    <h3>Privacy</h3>
+
+                    <input type="checkbox" name="privacy" id="privacy" aria-describedby="updates checkbox">
+                    <label for="privacy" title="select for privacy" class="focus-ele">
+                        Show my profile to the team
+                    </label>
+                </div>
+
+                <div class="save">
+                    <button type="button">Save preferences</button>
+                    <p class="text">Preferences saved!</p>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>
