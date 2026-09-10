@@ -15,7 +15,7 @@
     </header>
 
     <main>
-        <section class="details">
+        <section class="checkout-details">
             <form action="">
                 <fieldset>
                     <legend>
@@ -24,12 +24,81 @@
 
                     <div class="errors">
                         <p>Needed:</p>
-                        <p class="error">Postal Code</p>
-                        <p class="error">Recipient</p>
-                        <p class="error">Address</p>
+                        <ul>
+                            <li class="error">Postal Code</li>
+                            <li class="error">Recipient</li>
+                            <li class="error`">Address</li>
+                        </ul>
                     </div>
+
+                    <div class="recipient">
+                        <label for="recipient">Recipient Name</label>
+                        <input type="text" name="recipient" id="recipient" required>
+                    </div>
+
+                    <div class="address">
+                        <label for="address">Address</label>
+                        <textarea type="text" name="address" id="address" required>Enter text here</textarea>
+                    </div>
+
+                    <div class="city">
+                        <label for="cities">City</label>
+
+                        <select name="cities" id="cities">
+                            <option value="" selected>select option</option>
+                            <option value="hyderabad">Hyderabad</option>
+                            <option value="chennai">Chennai</option>
+                            <option value="benguluru">Benguluru</option>
+                            <option value="andhra">Andhra Pradesh</option>
+                        </select>
+                    </div>
+
+                    <div class="post">
+                        <label for="post">Post</label>
+                        <input type="number" name="post" id="post" required>
+                    </div>
+
+                    <div class="delivery">
+                        <div class="radio-btn">
+                            <input type="radio" name="delivery" id="standard">
+                            <label for="standard">Standard</label>
+                        </div>
+
+                        <div class="radio-btn">
+                            <input type="radio" name="delivery" id="next-day">
+                            <label for="next-day">Next Day</label>
+                        </div>
+                    </div>
+
+                    <button type="button">Continue</button>
                 </fieldset>
             </form>
+        </section>
+
+        <section class="order-summary">
+            <h3>Order Summary</h3>
+            <div class="container">
+
+                <div>
+                    <span>Order Placed By</span>
+                    <span>Lauren</span>
+                </div>
+
+                <div class="item">
+                    <span>Desk Lamp</span>
+                    <span>£28.00</span>
+                </div>
+
+                <div class="delivery-cost">
+                    <span>Delivery</span>
+                    <span>£4.00</span>
+                </div>
+
+                <div class="total">
+                    <span>Total</span>
+                    <span>£32.00</span>
+                </div>
+            </div>
         </section>
     </main>
 
