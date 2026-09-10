@@ -1,0 +1,10 @@
+@media (max-width: 40rem) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+    }
+}
