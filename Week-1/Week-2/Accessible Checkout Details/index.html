@@ -22,7 +22,7 @@
                         <h3>Checkout Details</h3>
                     </legend>
 
-                    <div class="errors">
+                    <div class="form-card errors">
                         <p>Needed:</p>
                         <ul>
                             <li class="error">Postal Code</li>
@@ -31,17 +31,18 @@
                         </ul>
                     </div>
 
-                    <div class="recipient">
+                    <div class="form-card recipient">
                         <label for="recipient">Recipient Name</label>
-                        <input type="text" name="recipient" id="recipient" required>
+                        <input type="text" name="recipient" id="recipient" required autocomplete="name">
                     </div>
 
-                    <div class="address">
+                    <div class="form-card address">
                         <label for="address">Address</label>
-                        <textarea type="text" name="address" id="address" required>Enter text here</textarea>
+                        <textarea type="text" name="address" id="address" required autocomplete="address"
+                            placeholder="Enter Address"></textarea>
                     </div>
 
-                    <div class="city">
+                    <div class="form-card city">
                         <label for="cities">City</label>
 
                         <select name="cities" id="cities">
@@ -53,12 +54,18 @@
                         </select>
                     </div>
 
-                    <div class="post">
-                        <label for="post">Post</label>
-                        <input type="number" name="post" id="post" required>
+                    <div class="form-card post">
+                        <label for="post">Postal Code</label>
+                        <input type="number" name="post" id="post" required autocomplete="postal-code">
                     </div>
 
-                    <div class="delivery">
+                    <div class="form-card phone-number">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" name="phone" id="phone" autocomplete="tel">
+                    </div>
+
+                    <div class="form-card delivery">
+                        <h3>Delivery</h3>
                         <div class="radio-btn">
                             <input type="radio" name="delivery" id="standard">
                             <label for="standard">Standard</label>
@@ -70,7 +77,7 @@
                         </div>
                     </div>
 
-                    <button type="button">Continue</button>
+                    <button type="submit">Continue</button>
                 </fieldset>
             </form>
         </section>
@@ -101,6 +108,10 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>@Created by Tempest for Learning Purpose</p>
+    </footer>
 
 </body>
 
