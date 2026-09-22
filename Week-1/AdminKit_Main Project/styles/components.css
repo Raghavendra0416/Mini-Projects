@@ -1,0 +1,73 @@
+/* Users */
+/* Users Cards */
+.user-cards {
+    display: grid;
+    gap: 1rem;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+}
+
+.user-card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(50, 36, 209);
+
+    max-height: 250px;
+    max-width: 350px;
+    /* padding: 0.5rem; */
+
+    border: 1px solid red;
+    border-radius: 30px;
+}
+
+.user-data {
+    display: flex;
+    border-bottom: 3px solid black;
+    padding: 0.5rem;
+}
+
+.user-img {
+    height: 50px;
+    width: 70px;
+
+    flex: 0 0 3.5rem;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+
+    margin-right: 0.5rem;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.user-img>img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.user-work-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.user-status {
+    background-color: green;
+    display: flex;
+    gap: 0.5rem;
+
+    height: fit-content;
+    padding: 0.2rem 0.7rem;
+
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.user-status>i {
+    margin-top: 0.3rem;
+}
+
+.user-metadata {
+    /* margin-left: 1rem; */
+    padding: 1rem;
+}
