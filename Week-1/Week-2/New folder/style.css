@@ -1,0 +1,37 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+    /* was: height: 100vh */
+    width: 100%;
+    /* was: width: 100vw */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset {
+    max-width: 500px;
+    /* stops the box from growing past a readable width */
+    width: 90%;
+    /* shrinks to fit narrow/zoomed viewports */
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    overflow-wrap: break-word;
+    /* long label text wraps instead of overflowing */
+}

@@ -1,6 +1,7 @@
 :root {
-    --background-color: black;
+    --background-color: rgba(0, 0, 0, 0.797);
     --text-color: rgb(197, 224, 224);
+    --font-family: 'Times New Roman', Times;
 
     --space-md: 1rem;
     --space-sm: 0.5rem;
@@ -18,6 +19,7 @@
 body {
     background: var(--background-color);
     color: var(--text-color);
+    font-family: var(--font-family);
 
     width: 10dw;
 }
@@ -59,4 +61,91 @@ a:hover {
 /* Main */
 main {
     margin: var(--space-md);
+}
+
+/* Questions */
+#questions {
+    margin: var(--space-md);
+}
+
+details {
+    margin: var(--space-sm);
+}
+
+.content {
+    margin-left: var(--space-md);
+    margin-top: 0.8rem;
+
+    background-color: rgb(130, 139, 147);
+    padding: var(--space-sm);
+    border-radius: 10px;
+    width: fit-content;
+    color: black;
+}
+
+.remember {
+    color: blanchedalmond;
+}
+
+.imp {
+    color: brown;
+}
+
+ul {
+    margin-left: var(--space-md);
+}
+
+/* Contact */
+#contact {
+    margin-bottom: 1rem;
+}
+
+.container {
+    margin: var(--space-md);
+
+    display: flex;
+    justify-content: start;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: rgba(137, 136, 136, 0.669);
+
+    padding: var(--space-md);
+    border-radius: 20px;
+}
+
+.address {
+    margin-left: 1rem;
+}
+
+/* Hours */
+table {
+    margin: var(--space-sm);
+    width: 60%;
+    border-collapse: collapse;
+}
+
+caption {
+    text-align: left;
+    margin: var(--space-sm)
+}
+
+th,
+td {
+    border: 1px solid white;
+    text-align: left;
+
+    padding: var(--space-sm);
+}
+
+/* Info */
+.info {
+    margin-left: var(--space-sm);
+}
+
+/* Footer */
+footer>p {
+    text-align: center;
 }

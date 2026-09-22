@@ -10,11 +10,11 @@
 
 <body>
     <header>
-        <h1><a href="index.html">Help Centre</a></h1>
+        <h1><a aria-label="Main Heading Help Centre" href="index.html">Help Centre</a></h1>
         <nav class="nav-links">
-            <a href="#questions">Questions</a>
-            <a href="#contact">Contact</a>
-            <a href="#hours">Hours</a>
+            <a aria-label="questions-link" href="#questions">Questions</a>
+            <a aria-label="contact-link" href="#contact">Contact</a>
+            <a aria-label="hours-link" href="#hours">Hours</a>
         </nav>
     </header>
 
@@ -23,42 +23,51 @@
             <h2>Frequently asked questions</h2>
             <details>
                 <summary>How do I reset my password?</summary>
-                <p>
-                    Click on reset button and enter your username and enter secrect question.
-                    Answer th secrect question and enter new credentials.
-                </p>
-                <span class="remember">The New Creds will take 15Min to Update.So, After Update Please try to login
-                    after 15Min</span>
-                <p class="imp">The Secrect Answer needs to be selected correctly</p>
+                <div class="content">
+                    <p>
+                        Click on reset button and enter your username and enter secrect question.
+                        Answer th secrect question and enter new credentials.
+                    </p>
+                    <span class="remember">The New Creds will take 15Min to Update.So, After Update Please try to login
+                        after 15Min</span>
+                    <p class="imp">The Secrect Answer needs to be selected correctly</p>
+                </div>
             </details>
 
             <details>
                 <summary>Where can I find an invoice?</summary>
-                <p>
-                    The invoice is found in the Payments Page and Open Billing, then choose Invoices by searching the
-                    required invoices.
-                </p>
+                <div class="content">
+                    <p>
+                        The invoice is found in the Payments Page and Open Billing, then choose Invoices by searching
+                        the
+                        required invoices.
+                    </p>
+                </div>
             </details>
 
             <details>
                 <summary>Can I change my plan?</summary>
-                <p>
-                    Plan can be changed before Payment. If the Payment is completed Plan cannot be changed.
-                    After payment, The Plan can only be changed by contacting support.
-                </p>
+                <div class="content">
+                    <p>
+                        Plan can be changed before Payment. If the Payment is completed Plan cannot be changed.
+                        After payment, The Plan can only be changed by contacting support.
+                    </p>
+                </div>
             </details>
 
             <details>
                 <summary>How do I cancel my subscription?</summary>
-                <p>
-                    Go to Account Settings, select Subscription, then choose Cancel Subscription. Your access will
-                    continue until the end of the current billing period.
-                </p>
+                <div class="content">
+                    <p>
+                        Go to Account Settings, select Subscription, then choose Cancel Subscription. Your access will
+                        continue until the end of the current billing period.
+                    </p>
+                </div>
             </details>
 
             <details>
                 <summary>What payment methods are accepted?</summary>
-                <div>
+                <div class="content">
                     We accept the following payment methods:
                     <ul>
                         <li>Credit & Debit Card</li>
@@ -69,7 +78,7 @@
             </details>
         </section>
 
-        <section id="Contact">
+        <section id="contact">
             <h2>Contact Us</h2>
 
             <div class="container">
@@ -85,13 +94,13 @@
                 </div>
             </div>
 
-            <div>
-                <p>
-                    <b>Mailing Address:</b>
-                    Example Corp, Attn: Support Ops, 4th Floor, Building C, 125 North Harbor Business Park Ave,
-                    Suite 4400, Springfield, IL 62704, USA
-                </p>
-            </div>
+
+            <p class="address">
+                <b>Mailing Address:</b><br>
+                Example Corp, Attn: Support Ops, 4th Floor,<br> Building C, 125 North Harbor Business Park Ave,<br>
+                Suite 4400, Springfield, IL 62704, USA
+            </p>
+
         </section>
 
         <section id="hours">
@@ -127,7 +136,7 @@
             </table>
         </section>
 
-        <section>
+        <section class="info">
             <p>No-hours message: "No live phone support on weekends — email or forum instead"</p>
         </section>
     </main>
