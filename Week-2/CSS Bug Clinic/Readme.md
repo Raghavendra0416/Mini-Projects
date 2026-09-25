@@ -38,3 +38,31 @@ Broken page                         Repaired page
 Repair log: defect | evidence | cause | fix | verification
 ```
 
+| Failure                | Typical Problem                |
+| ---------------------- | ------------------------------ |
+| Clipped Text           | Text gets cut off              |
+| Unwanted Page Scroll   | Unexpected scrollbar           |
+| Hidden Focus           | No keyboard focus indicator    |
+| Layer Covering Control | Controls can't be clicked      |
+| Specificity Conflict   | Wrong CSS rule applied         |
+| Overflow               | Content escapes container      |
+| Collapsed Margin       | Unexpected spacing             |
+| Flex Min-Width         | Flex items won't shrink        |
+| Stacking               | Wrong z-index layering         |
+| Grid Sizing            | Grid columns size incorrectly  |
+| Long Word              | Word causes layout break       |
+| Missing Asset          | Image/font/file not found      |
+| Mobile Width Defect    | Layout breaks on small screens |
+
+
+-------
+┌──────────────────────── News Dashboard ────────────────────────┐
+│ Header                                                         │
+├─────────────────────────┬──────────────────────────────────────┤
+│ Lead Story              │ Compact Sidebar                     │
+│ Main article            │ Trending                            │
+│ Hero image              │ Newsletter                          │
+│ Summary                 │ Weather                             │
+├─────────────────────────┴──────────────────────────────────────┤
+│ Story Card  │ Story Card │ Story Card │ Story Card             │
+└────────────────────────────────────────────────────────────────┘
