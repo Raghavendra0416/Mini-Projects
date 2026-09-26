@@ -56,10 +56,11 @@ h1 {
 .main-content {
     display: grid;
     grid-auto-flow: column;
-    gap: var(--space-md);
+    gap: var(--space-sm);
     /* grid-template-columns: 400px 1fr; */
 }
 
+/* Left Content */
 .left-content {
     overflow: hidden;
     border: 2px solid black;
@@ -75,7 +76,6 @@ h1 {
     width: 100%;
 
     object-fit: fill;
-    object-position: left;
 }
 
 .hero-description {
@@ -84,5 +84,69 @@ h1 {
     padding: var(--space-sm);
 
     background-color: rgba(61, 62, 63, 0.829);
+    color: aliceblue;
+}
+
+/* Right Content */
+.right-content {
+    background-color: #4f4f4fd3;
+    padding: var(--space-md);
+    margin-right: var(--space-sm);
+    border: 2px solid black;
+    height: fit-content;
+    color: aliceblue;
+}
+
+.right-content>p {
+    margin-left: var(--space-lg);
+}
+
+.anime-list {}
+
+a {
+    color: rgb(14, 36, 135);
+    font-size: small;
+}
+
+li {
+    margin-left: var(--space-lg);
+}
+
+/* Drop Cards */
+summary {
+    font-size: x-large;
+}
+
+.drop-card {
+    margin-left: var(--space-sm);
+    margin: var(--space-sm);
+
+    border: 2px solid black;
+    padding: var(--space-sm);
+    width: 70%;
+    background-color: bisque;
+}
+
+.drop-content {
+    margin-top: var(--space-sm);
+    margin-left: var(--space-md);
+    height: 400px;
+    max-width: 650px;
+    position: relative;
+
+    border: 2px solid black;
+}
+
+.drop-content>img {
+    height: 100%;
+    width: 100%;
+
+    object-fit: fill;
+}
+
+.drop-description {
+    position: absolute;
+    bottom: 0;
+    background-color: #4f4f4fd3;
     color: aliceblue;
 }
