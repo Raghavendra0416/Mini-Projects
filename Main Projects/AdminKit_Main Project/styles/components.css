@@ -184,6 +184,8 @@ body {
     width: 100px;
     border: 2px solid azure;
     border-radius: 50%;
+
+    cursor: pointer;
 }
 
 .user-personal-details {
