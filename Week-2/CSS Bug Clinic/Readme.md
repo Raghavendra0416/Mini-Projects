@@ -56,13 +56,3 @@ Repair log: defect | evidence | cause | fix | verification
 
 
 -------
-┌──────────────────────── News Dashboard ────────────────────────┐
-│ Header                                                         │
-├─────────────────────────┬──────────────────────────────────────┤
-│ Lead Story              │ Compact Sidebar                     │
-│ Main article            │ Trending                            │
-│ Hero image              │ Newsletter                          │
-│ Summary                 │ Weather                             │
-├─────────────────────────┴──────────────────────────────────────┤
-│ Story Card  │ Story Card │ Story Card │ Story Card             │
-└────────────────────────────────────────────────────────────────┘
