@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Kit</title>
+    <link rel="stylesheet" href="./styles/token.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/components.css">
+</head>
+
+<body class="settings-page">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <h1 class="main-title"><a href="/">Admin Kit</a></h1>
+        <nav aria-label="Primary navigation">
+            <ul class="nav-links">
+                <li><a href="./index.html">Dashboard</a></li>
+                <li><a href="#metrics">Metrics</a></li>
+                <li><a href="#activity">Activity</a></li>
+                <li><a href="./registration.html">Registration</a></li>
+                <li><a href="./users.html">Users</a></li>
+                <li><a href="./settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="user-settings-details">
+        <h1>Settings</h1>
+
+        <section class="settings-cards">
+            <section class="user-profile">
+                <h2 class="content-heading">Profile</h2>
+                <form class="settings user-profile-details">
+                    <div class="user-profile-img">
+                        <img src="./images/user-profile-pic.svg" alt="user-img">
+                    </div>
+
+                    <div class="user-personal-details">
+                        <div class="user-input">
+                            <label for="name">Display Name</label>
+                            <input type="text" placeholder="Ex:Jhon Doe">
+                        </div>
+
+                        <div class="user-input">
+                            <label for="email">Email</label>
+                            <input type="text" placeholder="Ex:jhon.doe@gmail.com">
+                        </div>
+
+                        <div class="user-input">
+                            <label for="bio">Bio</label>
+                            <textarea name="bio" id="bio" placeholder="Enter Here"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <section class="notifications">
+                <h2 class="content-heading">Notifications</h2>
+                <form class="settings user-notifications">
+                    <div class="notification">
+                        <input type="checkbox" name="updates" id="updates">
+                        <label for="updates">Profile Updates</label>
+                    </div>
+
+                    <div class="notification">
+                        <input type="checkbox" name="alerts" id="alerts">
+                        <label for="alerts">System Alerts</label>
+                    </div>
+
+                    <div class="notification">
+                        <input type="checkbox" name="new-users" id="new-users">
+                        <label for="new-users">New Users Notifications</label>
+                    </div>
+                </form>
+            </section>
+
+            <section class="queues">
+                <h2 class="content-heading">Queues Thresholds</h2>
+
+                <form class="settings user-queues">
+                    <div class="queue-level">
+                        <label for="">Support Queue Level</label>
+                        <input type="number">
+                    </div>
+
+                    <div class="queue-level">
+                        <label for="">Finance Queue Level</label>
+                        <input type="number">
+                    </div>
+
+                    <p class="extra-info">*Based on these thresholds the alerts will trigger</p>
+                </form>
+            </section>
+        </section>
+        <div class="submit-config-btn">
+            <button>Apply Configuration</button>
+        </div>
+    </main>
+</body>
+
+</html>
