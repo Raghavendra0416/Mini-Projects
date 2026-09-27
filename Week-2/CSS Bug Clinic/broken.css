@@ -1,3 +1,10 @@
+/* ============================================================
+   CSS BUG CLINIC — broken.css
+   Each block below intentionally reproduces one failure from
+   the table. Class names match the existing dashboard HTML so
+   the bugs are visible on the real page.
+   ============================================================ */
+
 *,
 *::after,
 *::before {
@@ -7,24 +14,287 @@
     padding: 0;
 }
 
+:root {
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+}
+
 body {
-    background: linear-gradient(46deg, rgb(212, 194, 194), rgb(113, 207, 113), rgb(128, 128, 188));
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: var(--space-md);
 }
 
-.container {
-    position: relative;
-    /* Establishes a positioning context */
+h1 {
+    border-bottom: 2px solid black;
+    margin: var(--space-sm);
 }
 
-.overlay {
-    position: absolute;
-    /* Positions relative to the container */
-    top: 0;
-    left: 0;
-    width: 100%;
+/* ------------------------------------------------------------
+   1. COLLAPSED MARGIN
+   h1's top margin collapses with body's margin because there's
+   no border/padding on body to contain it — the visual gap
+   above h1 is not what --space-md alone would suggest.
+   ------------------------------------------------------------ */
+body {
+    margin-top: var(--space-lg);
+    /* collapses with h1's margin-top */
+}
+
+/* ------------------------------------------------------------
+   2. FLEX MIN-WIDTH (items refuse to shrink)
+   Flex items default to min-width: auto, so they won't shrink
+   below their content size — the row overflows instead of
+   wrapping/shrinking.
+   ------------------------------------------------------------ */
+.hero-images {
+    min-height: 300px;
+    display: flex;
+    /* was grid */
+    gap: var(--space-sm);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    /* no flex-wrap, no min-width: 0 on children -> overflow */
+}
+
+.img-container {
+    min-height: 280px;
+    max-width: 700px;
+    flex: 1 0 auto;
+    /* flex-shrink effectively blocked by content min-width */
+    margin-bottom: 10px;
+}
+
+/* ------------------------------------------------------------
+   3. UNWANTED PAGE SCROLL
+   width: 100vw ignores the vertical scrollbar's width and
+   existing body margin, producing horizontal overflow.
+   ------------------------------------------------------------ */
+.img-container>img {
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent black */
-    z-index: 10;
-    /* Places the layer on top of the control */
+    width: 100vw;
+    /* bug: should be 100% */
+    object-fit: cover;
+    border: 3px solid black;
+    cursor: pointer;
 }
+
+/* ------------------------------------------------------------
+   Main Content / Left Content
+   ------------------------------------------------------------ */
+
+/* 4. GRID SIZING — fixed px column doesn't fit smaller/zoomed viewports */
+.main-content {
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--space-sm);
+    grid-template-columns: 1fr 500px;
+    /* bug: rigid px, causes overflow at zoom/mobile */
+}
+
+/* 5. OVERFLOW — fixed height too small for content, text/image escapes box */
+.left-content {
+    overflow: visible;
+    /* bug: should clip, but doesn't */
+    border: 2px solid black;
+    height: 200px;
+    /* bug: too small, content spills out */
+    margin-bottom: 10px;
+    max-width: 97%;
+    margin-left: var(--space-sm);
+    position: relative;
+}
+
+.left-content>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* 6. CLIPPED TEXT — caption box too short + hidden overflow cuts text off */
+.hero-description {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    /* bug: fixed, too short for the text */
+    overflow: hidden;
+    /* bug: clips instead of scrolling/growing */
+    padding: var(--space-sm);
+    background-color: rgba(61, 62, 63, 0.829);
+    color: aliceblue;
+}
+
+/* ------------------------------------------------------------
+   7. STACKING — wrong z-index makes overlay sit BEHIND the image
+   instead of above it, or covers something it shouldn't.
+   ------------------------------------------------------------ */
+.drop-content {
+    margin-top: var(--space-sm);
+    margin-left: var(--space-md);
+    height: 400px;
+    margin-bottom: 10px;
+    max-width: 650px;
+    position: relative;
+    border: 2px solid black;
+    z-index: 1;
+}
+
+.drop-content>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 5;
+    /* bug: sits above the caption below */
+}
+
+.drop-description {
+    position: absolute;
+    bottom: 0;
+    background-color: #4f4f4fd3;
+    color: aliceblue;
+    z-index: 0;
+    /* bug: caption gets buried under the image */
+}
+
+/* ------------------------------------------------------------
+   8. LAYER COVERING CONTROL
+   An invisible full-size overlay sits on top of the "Click Here"
+   link, intercepting clicks so the link can't be activated.
+   ------------------------------------------------------------ */
+.right-content {
+    background-color: #4f4f4fd3;
+    padding: var(--space-md);
+    margin-right: var(--space-sm);
+    border: 2px solid black;
+    height: fit-content;
+    color: aliceblue;
+    position: relative;
+}
+
+.right-content::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* covers the entire card, including the link */
+    background: transparent;
+    z-index: 10;
+    /* bug: sits above the "Click Here" link */
+}
+
+.right-content>p {
+    margin-left: var(--space-lg);
+}
+
+/* ------------------------------------------------------------
+   9. HIDDEN FOCUS — removes the visible keyboard focus indicator
+   ------------------------------------------------------------ */
+a {
+    color: rgb(14, 36, 135);
+    font-size: small;
+    outline: none;
+    /* bug: no visible focus state for keyboard users */
+}
+
+a:focus {
+    outline: none;
+    /* bug: doubly ensures it's invisible */
+}
+
+li {
+    margin-left: var(--space-lg);
+}
+
+/* ------------------------------------------------------------
+   10. SPECIFICITY CONFLICT
+   A later, more specific selector silently overrides the
+   intended simple rule, so "expected" styling never applies.
+   ------------------------------------------------------------ */
+.anime-list li {
+    color: green;
+    /* intended style */
+}
+
+.anime-list ul li {
+    color: inherit;
+    /* bug: higher specificity wins, green never shows */
+}
+
+/* Drop Cards */
+summary {
+    font-size: x-large;
+}
+
+/* ------------------------------------------------------------
+   11. MOBILE WIDTH DEFECT — fixed px width breaks small screens
+   ------------------------------------------------------------ */
+.drop-card {
+    margin: var(--space-sm);
+    border: 2px solid black;
+    padding: var(--space-sm);
+    width: 900px;
+    /* bug: forces horizontal scroll on mobile */
+    background-color: bisque;
+}
+
+/* ------------------------------------------------------------
+   Cards
+   ------------------------------------------------------------ */
+.cards-section>h2 {
+    margin-left: var(--space-sm);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 350px);
+    /* bug: fixed px tracks, no minmax/auto-fit */
+    gap: var(--space-sm);
+    border: 2px solid black;
+    margin-left: var(--space-sm);
+    margin-right: var(--space-sm);
+    margin-top: var(--space-sm);
+    padding: var(--space-sm);
+    overflow-x: hidden;
+    /* hides the resulting overflow instead of fixing it */
+}
+
+.card {
+    border: 2px solid black;
+    padding: var(--space-sm);
+    background-color: aliceblue;
+    box-shadow: 2px 2px black;
+    text-align: left;
+}
+
+/* ------------------------------------------------------------
+   12. LONG WORD — no wrapping rule lets a long unbroken string
+   push past the card boundary instead of breaking.
+   ------------------------------------------------------------ */
+.para {
+    white-space: normal;
+    overflow-wrap: normal;
+    /* bug: should be break-word / anywhere */
+    word-break: keep-all;
+    /* bug: prevents breaking long tokens */
+}
+
+/* ------------------------------------------------------------
+   13. MISSING ASSET — references files that don't exist
+   ------------------------------------------------------------ */
+@font-face {
+    font-family: 'DashboardSans';
+    src: url('./assets/fonts/dashboard-sans.woff2') format('woff2');
+    /* bug: path doesn't exist */
+}
+
+body {
+    font-family: 'DashboardSans', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.cards-section {
+    background-image: url('./assets/section-bg-missing.png');
+    /* bug: file not found */
+    background-repeat: no-repeat;
+}
+
+.para {}
