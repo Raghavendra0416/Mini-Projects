@@ -116,6 +116,10 @@ aside {
     overflow: hidden;
 }
 
+.coding:focus {
+    border: 3px solid black;
+}
+
 .methods {
     border-bottom: 1px solid black;
 }
