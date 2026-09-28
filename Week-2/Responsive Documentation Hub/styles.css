@@ -16,7 +16,7 @@ nav {
     /* background-color: rgba(171, 180, 177, 0.326); */
     background: linear-gradient(45deg, #cbddd2, transparent);
 
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
 }
 
 nav>h1 {
@@ -113,6 +113,7 @@ aside {
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: 1px 2px black;
+    overflow: hidden;
 }
 
 .methods {
@@ -128,10 +129,18 @@ pre {
     /* margin-bottom: var(--space-sm); */
     font-size: medium;
     padding-left: var(--space-sm);
+    /* padding-top: 0; */
 
     color: black;
 }
 
+pre:nth-child(2) {
+    padding-top: 0px;
+}
+
+.comment {
+    color: grey;
+}
 
 footer {
     text-align: center;

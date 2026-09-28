@@ -35,18 +35,18 @@
             <h2>Get started</h2>
             <p>Connect to the API in minutes</p>
 
-            <p class="status"><b>Status:</b> All systems operational</p>
+            <p class="status"><b>Status:</b> <span class="comment">All systems operational</span></p>
 
             <section class="coding">
-                <pre class="methods"><code>GET /v1/orders</code></pre>
+                <pre class="methods"><code><b>GET /v1/orders</b></code></pre>
                 <pre>
                     <code>
-// Could be GET or POST/PUT/PATCH/DELETE
-fetch('https://northstar.com/v1/orders')
-    .then(res =&gt; res.json())
-    .then(console.log);
+    <span class="comment">// Could be GET or POST/PUT/PATCH/DELETE</span>
+    fetch('https://northstar.com/v1/orders')
+        .then(res =&gt; res.json())
+        .then(console.log);
             
-/* { status: 'ok', method: 'GET' } */
+   <span class="comment"> /* { status: 'ok', method: 'GET' } */</span> 
                     </code>
                 </pre>
             </section>
