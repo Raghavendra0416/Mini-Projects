@@ -145,6 +145,8 @@ pre:nth-child(2) {
 footer {
     text-align: center;
     margin-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    margin-bottom: 32px;
     color: black;
     font-size: 0.85em;
 }

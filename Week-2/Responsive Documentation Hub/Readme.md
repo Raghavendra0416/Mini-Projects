@@ -25,3 +25,8 @@
 - Narrow viewport
 - Uncommitted asset
 - Accidental unrelated change
+
+## Issues:
+- For coding section the background is overflowing due to `pre` element. so added `overflow:hidden` to hide the overflowing.
+- Took more time than expected due to work.
+- Tried to make the 
