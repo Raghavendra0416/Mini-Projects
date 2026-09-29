@@ -5,10 +5,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Till Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header>
+        <h1>Till tax calculator</h1>
+    </header>
 
+    <main>
+        <section id="input-data">
+            <form action="">
+                <div class="user-inputs">
+                    <label for="netAmount">Net Amount</label>
+                    <input type="text" name="netAmount" id="netAmount" placeholder="Enter Amount Here">
+                </div>
+
+                <div class="user-inputs">
+                    <label for="taxRate">Tax Rate</label>
+                    <input type="text" name="taxRate" id="taxRate" placeholder="Enter Tax Rate here">
+                </div>
+
+                <button id="calculate" type="submit">Calculate</button>
+            </form>
+        </section>
+
+        <section class="display-data">
+            <h4>User Data</h4>
+            <div class="user-data">
+                <p>
+                    Net Amount: <span id="netValue"></span>
+                </p>
+                <p>
+                    Tax: <span id="taxValue"></span>
+                </p>
+                <p>
+                    Gross: <span id="grossValue"></span>
+                </p>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <caption>Scenario Based Data</caption>
+                    <thead>
+                        <tr>
+                            <th>Scenerio</th>
+                            <th>Net Amount</th>
+                            <th>Tax Rate</th>
+                            <th>Gross</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th>Before</th>
+                            <td class="netValue"></td>
+                            <td class="taxRateValue"></td>
+                            <td>NA</td>
+                        </tr>
+
+                        <tr>
+                            <th>Result</th>
+                            <td class="netValue"></td>
+                            <td class="taxValue"></td>
+                            <td class="grossValue"></td>
+                        </tr>
+
+                        <tr>
+                            <th>After</th>
+                            <td class="netValue"></td>
+                            <td class="taxRateValue"></td>
+                            <td>NA</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        @Created By <a href="#">Tempest</a> for learning purpose.
+    </footer>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
