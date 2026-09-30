@@ -107,7 +107,13 @@ form>button:hover {
 
 .user-data {
     border: 2px solid rgba(239, 236, 236, 0.717);
+    border-radius: 6px;
     padding: var(--space-sm);
+}
+
+.user-values {
+    font-size: 0.85rem;
+    font-weight: 300;
 }
 
 /* Table */
@@ -132,4 +138,5 @@ td {
     border: 1px solid white;
     border-collapse: collapse;
     padding: var(--space-sm);
+    border-radius: 6px;
 }

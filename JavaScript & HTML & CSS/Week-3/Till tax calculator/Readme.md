@@ -16,12 +16,15 @@ Input Values:
     Net Amount: ₹50
     Tax Rate: 18%
 Calculations:
+Tax Rate:
 Tax rate decimal: value/100
 Calculation: 18/100 = 0.18
 
+Tax:
 Formula: Net amount × Tax rate decimal
 Calculation: ₹50.00 × 0.18 = ₹9.00
 
+Gross:
 Formula: Net amount + Tax amount
 Calculation: ₹50.00 + ₹9.00 = ₹59.00
 

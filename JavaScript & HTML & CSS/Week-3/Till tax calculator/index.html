@@ -15,15 +15,15 @@
 
     <main>
         <section id="input-data">
-            <form action="">
+            <form id="myForm">
                 <div class="user-inputs">
                     <label for="netAmount">Net Amount</label>
-                    <input type="text" name="netAmount" id="netAmount" placeholder="Enter Amount Here">
+                    <input type="number" name="netAmount" id="netAmount" placeholder="Enter Amount Here">
                 </div>
 
                 <div class="user-inputs">
                     <label for="taxRate">Tax Rate</label>
-                    <input type="text" name="taxRate" id="taxRate" placeholder="Enter Tax Rate here">
+                    <input type="number" name="taxRate" id="taxRate" placeholder="Enter Tax Rate here">
                 </div>
 
                 <button id="calculate" type="submit">Calculate</button>
@@ -34,13 +34,13 @@
             <h4>User Data</h4>
             <div class="user-data">
                 <p>
-                    Net Amount: <span id="netValue"></span>
+                    Net Amount: <span class="user-values netValue">No Data Yet</span>
                 </p>
                 <p>
-                    Tax: <span id="taxValue"></span>
+                    Tax: <span class="user-values taxValue">No Data Yet</span>
                 </p>
                 <p>
-                    Gross: <span id="grossValue"></span>
+                    Gross: <span class="user-values grossValue">No Data Yet</span>
                 </p>
             </div>
 
@@ -59,22 +59,22 @@
                     <tbody>
                         <tr>
                             <th>Before</th>
-                            <td class="netValue"></td>
-                            <td class="taxRateValue"></td>
+                            <td class="netValue">No Data Yet</td>
+                            <td class="taxRateValue">No Data Yet</td>
                             <td>NA</td>
                         </tr>
 
                         <tr>
                             <th>Result</th>
-                            <td class="netValue"></td>
-                            <td class="taxValue"></td>
-                            <td class="grossValue"></td>
+                            <td class="netValue">No Data Yet</td>
+                            <td class="taxValue">No Data Yet</td>
+                            <td class="grossValue">No Data Yet</td>
                         </tr>
 
                         <tr>
                             <th>After</th>
-                            <td class="netValue"></td>
-                            <td class="taxRateValue"></td>
+                            <td class="netValue">No Data Yet</td>
+                            <td class="taxRateValue">No Data Yet</td>
                             <td>NA</td>
                         </tr>
                     </tbody>
