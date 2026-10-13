@@ -38,6 +38,9 @@ const rows = [
 ];
 
 console.log("Rows: ", rows);
+export {
+    rows
+}
 
 // Understanding:
 // Instance Method: A method defined inside a class and called using an instance (object) of that class is called an instance method.
