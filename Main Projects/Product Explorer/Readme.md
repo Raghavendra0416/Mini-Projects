@@ -1,6 +1,6 @@
-Why the domain stays functional?
-- products are records
-- queries are data in, new list out
-- `this` is a call-site trap you do not need here
-- modules already give you a boundary
-- a class can wait until something has identity and behaviour over time
+### Why the domain stays functional
+* **Products as Records:** Our products are simply data records rather than complex objects.
+* **Pure Queries:** Queries strictly operate by taking data in and returning a new list out.
+* **No `this` Traps:** We avoid `this` because it creates unpredictable call-site traps that aren't needed here.
+* **Module Boundaries:** JavaScript modules already provide a clean and sufficient boundary for our code.
+* **Behavior Over Time:** We are holding off on using classes until a concept genuinely requires identity and behavior tracking over time.
