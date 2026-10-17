@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor versus factory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <div>
+            <p class="eyebrow">JavaScript behavior demo</p>
+            <h1>Constructor versus factory</h1>
+        </div>
+        <button id="run-examples" type="button">Run examples</button>
+    </header>
+
+    <main class="page-shell">
+        <section class="demo-panel" aria-labelledby="constructor-title">
+            <div class="panel-header">
+                <h2 id="constructor-title">Constructor</h2>
+                <span class="mode-pill">Strict mode</span>
+            </div>
+            <p class="panel-description">Detached methods lose their receiver, so this becomes undefined.</p>
+            <div id="constructor" class="results-table" aria-live="polite"></div>
+        </section>
+
+        <section class="demo-panel" aria-labelledby="factory-title">
+            <div class="panel-header">
+                <h2 id="factory-title">Factory</h2>
+                <span class="mode-pill">Closure</span>
+            </div>
+            <p class="panel-description">The closure keeps the amount even when this is not the instance.</p>
+            <div id="factory" class="results-table" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>

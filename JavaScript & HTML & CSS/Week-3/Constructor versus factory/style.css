@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin: 1rem;
+    margin-bottom: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.results-table {
+    border: 2px solid whitesmoke;
+    box-shadow: 1px 2px whitesmoke;
+    border-radius: 20px;
+    padding: 1rem;
+
+    background-color: rgba(211, 211, 211, 0.53);
+}
+
+.table-head {
+    font-size: larger;
+    font-weight: bolder;
+    color: black;
+    background-color: azure;
+}
+
+.displayed-data {
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    max-width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-data {
+    font-weight: 100;
+    font-size: 0.9em;
+}
+
+footer {
+    color: whitesmoke;
+    font-size: small;
+    text-align: center;
+    margin-top: 1rem;
+}
