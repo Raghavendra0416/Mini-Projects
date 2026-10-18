@@ -10,9 +10,7 @@ const libraryCatalogue = [
     { id: 8, title: "Sapiens", author: "Yuval Noah Harari", genre: "Non-Fiction", year: 2011 }
 ];
 
+// Array cannot be mutauted
 const books = Object.freeze(libraryCatalogue);
-
-console.log(books);
-
 
 export { books };

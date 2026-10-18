@@ -12,6 +12,10 @@
 - Print or render: original order, unique authors, each genre group, sorted-by-title order.
 - Use pure JavaScript. Do not use external libraries or fetch calls.
 
+## Topics Covered:
+- Objects, Arrays, Sets.
+- `sort()`, `filter()`, `map()`.
+
 ## Need to Pass:
 - After sorting, the original array's order shold be unchanged (log both- changed and original).
 - Unique author list should not have duplicates.
@@ -22,6 +26,12 @@ i.e We will be creating a new array for a genere every time for a book, and the 
 issue: When you sort your books by year, JavaScript needs to know what to do with the book(s) that don't have a year listed.
 policy: You must decide on a specific rule for this. For example, your rule could be: "Books with no year will always appear at the very end of the sorted list."
 Noting: Note the rule in `Readme.md`
+
+## How does the page looks?
+- The Original Array data should be shown at the Top. Proof to show that the original array is not mutating.
+- Show unique authors.
+- Group By genere.
+- Add a DropDown that user can select the title and he will see the details of the book below. 
 
 
 ## Page Layout:
