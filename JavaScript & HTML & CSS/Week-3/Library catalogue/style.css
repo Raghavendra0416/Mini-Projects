@@ -1,0 +1,14 @@
+#book-details dl {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 12px 16px;
+    margin: 16px 0;
+}
+
+#book-details dt {
+    font-weight: 600;
+}
+
+#book-details dd {
+    margin: 0;
+}

@@ -1,27 +1,26 @@
 "use strict";
 import { books } from "./books.js";
 
-// Unique Authors
-let authors = new Set();
+// Get book names in their original order
+const bookNames = books.map((book) => book.title);
 
-// Group By Genere
-let groupByGenere = {};
+// Get unique authors
+const authors = new Set(books.map((book) => book.author));
 
-// Function
-books.map((book) => {
-    authors.add(book.author);
-
-    if (!(book.genre in groupByGenere)) {
-        groupByGenere[book.genre] = [book.title];
-    } else {
-        groupByGenere[book.genre].push(book.title);
+// Group books by genre
+const groupByGenre = books.reduce((groups, book) => {
+    if (!groups[book.genre]) {
+        groups[book.genre] = [];
     }
-});
 
-// Sort By Year
-// If Year is null then adds the book at last.
+    groups[book.genre].push(book.title);
+
+    return groups;
+}, {});
+
+// Sort by year (unknown years go last)
 const sortByYear = [...books].sort((a, b) => {
-    // To Add the year with null at the end.
+    if (a.year === null && b.year === null) return 0;
     if (a.year === null) return 1;
     if (b.year === null) return -1;
 
@@ -29,21 +28,23 @@ const sortByYear = [...books].sort((a, b) => {
 });
 
 // Sort by title
-const sortedBooks = [...books].sort(
-    (a, b) => a.title.localeCompare(b.title)
+const sortedByTitle = [...books].sort((a, b) =>
+    a.title.localeCompare(b.title)
 );
 
-
-
-// Get By Book Name
+// Find a book by title
 function getBookName(name) {
-    return books.filter((book) => { book.title = name });
+    return books.find(
+        (book) =>
+            book.title.toLowerCase() === name.trim().toLowerCase()
+    );
 }
 
 export {
+    bookNames,
     authors,
-    groupByGenere,
+    groupByGenre,
     sortByYear,
-    sortedBooks,
-    getBookName,
-}
+    sortedByTitle,
+    getBookName
+};
