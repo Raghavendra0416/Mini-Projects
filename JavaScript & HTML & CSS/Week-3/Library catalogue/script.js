@@ -32,6 +32,21 @@ renderList("original", bookNames);
 // Unique authors
 renderList("authors", authors);
 
+// Books sorted by title
+renderList(
+    "title",
+    sortedByTitle,
+    (book) => `${book.title} — ${book.author}`
+);
+
+// Books sorted by year
+renderList(
+    "year",
+    sortByYear,
+    (book) => `${book.year ?? "Year unknown"} — ${book.title}`
+);
+
+
 // Books grouped by genre
 function renderGenres(id, groups) {
     const container = document.getElementById(id);
@@ -63,21 +78,6 @@ function renderGenres(id, groups) {
 }
 
 renderGenres("genre", groupByGenre);
-
-// Books sorted by title
-renderList(
-    "title",
-    sortedByTitle,
-    (book) => `${book.title} — ${book.author}`
-);
-
-// Books sorted by year
-renderList(
-    "year",
-    sortByYear,
-    (book) => `${book.year ?? "Year unknown"} — ${book.title}`
-);
-
 
 // Populate the book-selection dropdown
 const bookSelect = document.getElementById("options");
