@@ -5,10 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Predict the log order</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    
+    <h1>Predict the log order</h1>
+
+    <section id="predict">
+        <h4>Predicted Output:</h4>
+        <form>
+            <label for="expectedOutput">Please enter the Predicted output below:</label>
+            <textarea name="expectedOutput" id="expectedOutput" cols="60" rows="10"
+                placeholder="Enter the Output here.."></textarea>
+        </form>
+    </section>
+
+    <section id="observed">
+        <h4>Observed Output:</h4>
+        <div id="result">
+            <!-- Added Using JS -->
+        </div>
+    </section>
+
+    <footer>
+        @Created By Tempest for learning purpose
+    </footer>
+    <script type="module" src="./script.js"></script>
 </body>
 
 </html>
