@@ -9,28 +9,49 @@
 </head>
 
 <body>
-    <h1>Predict the log order</h1>
+    <header>
+        <h1>Predict the log order</h1>
+        <p>More clearly explained in the Exercise folder (i.e event-loop.js)</p>
+    </header>
 
-    <section id="predict">
-        <h4>Predicted Output:</h4>
-        <form>
-            <label for="expectedOutput">Please enter the Predicted output below:</label>
-            <textarea name="expectedOutput" id="expectedOutput" cols="60" rows="10"
-                placeholder="Enter the Output here.."></textarea>
-        </form>
+
+    <section class="inputData">
+        <div id="input" class="display-data">
+            <!-- Will add after creating Script -->
+        </div>
     </section>
 
-    <section id="observed">
-        <h4>Observed Output:</h4>
-        <div id="result">
-            <!-- Added Using JS -->
-        </div>
+    <section class="info">
+        <section id="predict">
+            <h4>Predicted Output:</h4>
+            <form>
+                <label for="expectedOutput">Please enter the Predicted output below:</label>
+                <textarea name="expectedOutput" id="expectedOutput" cols="60" rows="10"
+                    placeholder="Enter the Output here.."></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="UserOutput" class="display-data">
+                <!-- Added Using JS -->
+            </div>
+        </section>
+
+        <section id="observed">
+            <h4>Observed Output:</h4>
+            <button type="button" id="render">Run</button>
+            <div id="result" class="display-data">
+                <!-- Added Using JS -->
+            </div>
+            <button type="button" id="reset">Reset</button>
+        </section>
     </section>
 
     <footer>
         @Created By Tempest for learning purpose
     </footer>
-    <script type="module" src="./script.js"></script>
+    <script src="./observedOutput.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
