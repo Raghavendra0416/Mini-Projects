@@ -16,15 +16,54 @@
 
 
     <section class="inputData">
+        <h4>Input</h4>
         <div id="input" class="display-data">
             <!-- Will add after creating Script -->
+            <ol>
+                <li>
+                    <code>console.log("1. Click-start");</code>
+                </li>
+
+                <li>
+                    <code>
+                    setTimeout(() => {
+                    console.log("2. Timeout-0");
+                    }, 0);
+                    </code>
+                </li>
+
+                <li>
+                    <code>
+                    Promise.resolve().then(() => {
+                    console.log("3. Promise-then");
+                    })
+                </code>
+                </li>
+                <li>
+                    <code>console.log("4. Click-end");</code>
+                </li>
+
+                <li>
+                    <pre><code>const data = fakeFetch().then(() => {
+    console.log("5. Promise-starts");
+})
+
+function fakeFetch() {
+    return new Promise((resolve) => {
+    setTimeout(() => resolve("catalogue"), 0);
+    });
+}
+                    </code></pre>
+                </li>
+                <li><code>console.log("6. Returned fake fetch:", data);</code></li>
+            </ol>
         </div>
     </section>
 
     <section class="info">
         <section id="predict">
             <h4>Predicted Output:</h4>
-            <form>
+            <form id="myForm">
                 <label for="expectedOutput">Please enter the Predicted output below:</label>
                 <textarea name="expectedOutput" id="expectedOutput" cols="60" rows="10"
                     placeholder="Enter the Output here.."></textarea>
@@ -32,8 +71,10 @@
                 <button type="submit">Submit</button>
             </form>
 
+            <h4>User Predicted Output:</h4>
             <div id="UserOutput" class="display-data">
                 <!-- Added Using JS -->
+                <p>Not Yet Provided</p>
             </div>
         </section>
 
@@ -50,8 +91,9 @@
     <footer>
         @Created By Tempest for learning purpose
     </footer>
-    <script src="./observedOutput.js"></script>
-    <script src="./script.js"></script>
+    <!-- <script src="./observedOutput.js"></script> -->
+    <!-- <script src="./ExpectedOutput.js"></script> -->
+    <script type="module" src="./script.js"></script>
 </body>
 
 </html>
