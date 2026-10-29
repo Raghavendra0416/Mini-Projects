@@ -1,0 +1,8 @@
+#products div {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 0;
+
+    background-color: aliceblue;
+    margin: 0.5rem;
+}
