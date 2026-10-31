@@ -2,29 +2,51 @@ import { products } from "./data/products.js";
 import { searchByProducts, filterByCategory, sortByProducts } from "./domain/productQueries.js";
 import { renderProducts } from "./ui/renderProducts.js"
 
-
+//---------------------------------------------
 // Render Filter drop options
 const filterSelect = document.querySelector("#filter");
-const categories = ["Select the below", ...new Set(products.map((p) => p.category))];
+const categories = [...new Set(products.map((p) => p.category))];
 
-filterSelect.innerHTML = categories
-    .map((c) => `<option value="${c}">${c}</option>`)
-    .join("");
+filterSelect.replaceChildren(
+    new Option("All Categories", "all"), //<--Creates a new HTML <option> element
+    ...categories.map((category) => new Option(category, category))
+);
 
+// filterSelect.innerHTML = categories
+//     .map((c) => `<option value="${c}">${c}</option>`)
+//     .join("");
 
-// Get data from the user and render the data in the page
-const myForm = document.querySelector("form")
-let filterState = products;
-myForm.addEventListener("change", (event) => {
-    event.preventDefault();
+//--------------------------------------------
 
-    console.log("Change Happened enter event listner")
-    const data = Object.fromEntries(new FormData(event.currentTarget));
+// Get DOM elements
+const myForm = document.querySelector("form");
 
-    filterState = filterByCategory(filterState, data.filter);
-    filterState = sortByProducts(filterState, data.sort);
-    filterState = searchByProducts(filterState, data.search);
+// Main function to handle search, filter and sort
+function updateProducts() {
+    // Get user input
+    const formData = new FormData(myForm);
 
-    console.log(filterState);
-    renderProducts(filterState);
-});
+    const searchQuery = formData.get("search");
+    const category = formData.get("filter");
+    const sortKey = formData.get("sort");
+
+    // Start with the original products
+    let result = products;
+
+    // 1. Search
+    result = searchByProducts(result, searchQuery);
+
+    // 2. Filter
+    result = filterByCategory(result, category);
+
+    // 3. Sort
+    result = sortByProducts(result, sortKey);
+
+    // Render final results
+    renderProducts(result);
+}
+
+myForm.addEventListener("input", updateProducts);
+
+// Initial rendering
+updateProducts();

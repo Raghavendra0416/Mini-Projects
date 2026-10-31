@@ -32,9 +32,11 @@ function sortByProducts(products, sortKey) {
         // rating
         sortedProducts.sort((a, b) => {
             // The Book with no rating will be at last
-            if (!a.rating) return 1;
-            if (!b.rating) return -1;
+            if (a.rating == null && b.rating == null) return 0;
+            if (a.rating == null) return 1;
+            if (b.rating == null) return -1;
 
+            // Highest rating first
             return (b.rating - a.rating)
         }
         )
