@@ -93,6 +93,39 @@ export const products = [
         category: 'Home',
         price: 14.95,
     },
+    {
+        id: 'electronics-wireless-keyboard',
+        name: 'Wireless Mechanical Keyboard',
+        category: 'Electronics',
+        price: 59.99,
+        rating: 4.5,
+    },
+    {
+        id: 'home-electric-coffee-maker',
+        name: 'Electric Coffee Maker',
+        category: 'Home',
+        price: 45.99,
+    },
+    {
+        id: 'books-javascript-guide',
+        name: 'JavaScript Programming Guide',
+        category: 'Books',
+        price: 29.99,
+        rating: 4.7,
+    },
+    {
+        id: 'apparel-travel-backpack',
+        name: 'Travel Backpack',
+        category: 'Apparel',
+        price: 42.50,
+    },
+    {
+        id: 'sports-adjustable-dumbbells',
+        name: 'Adjustable Dumbbells',
+        category: 'Sports',
+        price: 79.99,
+        rating: 4.6,
+    },
 ];
 
 for (const product of products) {
