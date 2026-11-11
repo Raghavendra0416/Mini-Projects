@@ -1,0 +1,7 @@
+#no-movies {
+    display: none;
+}
+
+#movies-list {
+    display: block;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Watchlist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Movie Watchlist</h1>
+    </header>
+
+    <main>
+        <section>
+            <form id="myForm">
+                <div class="input-container">
+                    <label for="title">Movie Title</label>
+                    <input type="text" id="title" name="title" placeholder="Enter Movie Title..">
+                </div>
+
+                <button type="submit" class="btn">Add Movie</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Movie List</h2>
+            <ol id="movies-list">
+                <!-- Add using JS -->
+            </ol>
+        </section>
+
+        <!-- Only When there are no movies -->
+        <section id="no-movies">
+            <p><b>No films added yet.</b></p>
+        </section>
+    </main>
+
+    <footer>
+        @Created by Tempest for learning purpose.
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
