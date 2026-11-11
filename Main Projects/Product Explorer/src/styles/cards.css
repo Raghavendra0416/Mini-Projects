@@ -8,7 +8,7 @@
 }
 
 /* Individual product card */
-#products>div {
+#products>article {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
@@ -25,21 +25,26 @@
 }
 
 /* Card hover effect */
-#products>div:hover {
+#products>article:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
 }
 
 /* Product details */
-#products>div span {
+#products>article span {
     color: #4b5563;
     font-size: 0.95rem;
     line-height: 1.5;
 }
 
 /* Product name */
-#products>div span:first-child {
+#products>article span:first-child {
     color: #1f2937;
     font-size: 1.1rem;
     font-weight: 600;
+}
+
+#products>p {
+    grid-column: 1 / -1;
+    text-align: center;
 }

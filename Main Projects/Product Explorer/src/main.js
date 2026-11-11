@@ -1,6 +1,6 @@
 import { products } from "./data/products.js";
 import { searchByProducts, filterByCategory, sortByProducts } from "./domain/productQueries.js";
-import { renderProducts } from "./ui/renderProducts.js"
+import { renderProductList } from "./ui/productList.js";
 
 //---------------------------------------------
 // Render Filter drop options
@@ -20,6 +20,7 @@ filterSelect.replaceChildren(
 
 // Get DOM elements
 const myForm = document.querySelector("form");
+const productsContainer = document.querySelector("#products");
 
 // Main function to handle search, filter and sort
 function updateProducts() {
@@ -43,7 +44,7 @@ function updateProducts() {
     result = sortByProducts(result, sortKey);
 
     // Render final results
-    renderProducts(result);
+    renderProductList(result, productsContainer);
 }
 
 myForm.addEventListener("input", updateProducts);
