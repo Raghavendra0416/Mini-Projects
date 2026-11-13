@@ -5,3 +5,13 @@
 #movies-list {
     display: block;
 }
+
+#movies-list li {
+    margin-bottom: 0.5rem;
+}
+
+.status {
+    margin: 0 0.5rem;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
