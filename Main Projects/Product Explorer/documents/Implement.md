@@ -30,3 +30,29 @@ productList.js accepts products and a container, clears it, renders cards, or sh
 main.js now uses the list renderer.
 cards.css styles the new article cards and empty message.
 The old renderer was removed because its functionality is now handled by the card and list modules.
+
+---------------------------------------------------------
+### 1. Update the Card HTML
+* Locate the JavaScript where you generate the HTML for your product cards.
+* Add a `<button>` element inside the card specifically for favouriting.
+* Add the attribute `data-action="favourite"` to this button.
+* Ensure the button has clear text or an `aria-label` (like "Favourite" or "Unfavourite").
+
+### 2. Set Up Your State
+* Open your `main.js` file.
+* Create a new `Set` to keep track of the items the user likes.
+* You can define it simply as `const favouriteIds = new Set();`.
+
+### 3. Attach the Single Event Listener
+* Select the main parent container that holds all your product cards (for example, the `<div id="product-list">`).
+* Attach a single `addEventListener('click', ...)` directly to this parent container. Do not loop through and attach listeners to the individual buttons.
+
+### 4. Handle the Click Logic
+* Inside your event listener, figure out exactly what was clicked using `event.target`.
+* Use the `.closest('[data-action="favourite"]')` method to check if the click happened on (or inside) your favourite button. If it didn't, ignore the click.
+* If the button was clicked, find the closest product card and read its `data-product-id`.
+
+### 5. Update State and the DOM
+* Check if that product ID is already in your `favouriteIds` Set.
+* If it is in the Set: remove it, and change the button's text to "Favourite" (or set `aria-pressed="false"`).
+* If it is not in the Set: add it, and change the button's text to "Unfavourite" (or set `aria-pressed="true"`).

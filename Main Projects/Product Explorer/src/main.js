@@ -1,6 +1,8 @@
 import { products } from "./data/products.js";
 import { searchByProducts, filterByCategory, sortByProducts } from "./domain/productQueries.js";
 import { renderProductList } from "./ui/productList.js";
+import { toggleFavourite, isFavourite } from "./domain/favouriteActions.js"
+import { syncFavButton } from "./ui/favButton.js"
 
 //---------------------------------------------
 // Render Filter drop options
@@ -36,18 +38,31 @@ function updateProducts() {
 
     // 1. Search
     result = searchByProducts(result, searchQuery);
-
     // 2. Filter
     result = filterByCategory(result, category);
-
     // 3. Sort
     result = sortByProducts(result, sortKey);
-
     // Render final results
     renderProductList(result, productsContainer);
 }
 
+
+//------------------------------
+// Handling fav
+function handleFav(e) {
+    const button = e.target.closest("button[data-action]");
+    if (!button) return;
+
+    const id = button.closest("article")?.dataset.productId;
+    if (!id) return;
+
+    toggleFavourite(id);
+    syncFavButton(button, isFavourite(id));
+}
+
+// Event Listners
 myForm.addEventListener("input", updateProducts);
+productsContainer.addEventListener("click", handleFav);
 
 // Initial rendering
 updateProducts();

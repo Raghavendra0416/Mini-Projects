@@ -12,8 +12,18 @@ function createProductCard(product) {
     price.textContent = `Price: $${product.price}`;
     rating.textContent = `Rating: ${product.rating ?? "No rating"}`;
 
-    article.append(name, category, price, rating);
+    const favBtn = document.createElement('button');
+
+    favBtn.textContent = '🤍';
+    favBtn.dataset.action = "favourite";
+    favBtn.ariaLabel = "favourite";
+    favBtn.className = "fav-btn";
+
+    article.append(name, favBtn, category, price, rating);
     return article;
 }
 
+
 export { createProductCard };
+
+

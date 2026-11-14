@@ -19,3 +19,4 @@ function renderProductList(products, container) {
 }
 
 export { renderProductList };
+
