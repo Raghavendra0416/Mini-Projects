@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Weather</title>
+</head>
+
+<body>
+    <form id="weather-form">
+        <label for="city-input">City:</label>
+        <input type="text" id="city-input" required>
+
+        <label>
+            <input type="checkbox" id="offline-checkbox"> Simulate offline
+        </label>
+
+        <button type="submit" id="search-btn">Search</button>
+    </form>
+
+    <div id="result-container">
+        <!-- Loading, weather data, or errors here -->
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
