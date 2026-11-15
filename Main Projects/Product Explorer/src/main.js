@@ -66,3 +66,17 @@ productsContainer.addEventListener("click", handleFav);
 
 // Initial rendering
 updateProducts();
+
+
+
+
+
+
+
+
+
+
+//--------------------
+// In main.js, paint loading, call the API, run the Week 3 query functions, then paint products.
+// Retry calls the same load function. Keep the favourite Set and delegated listener from Day 2.
+// Create one malformed JSON fixture and one wrong-shape fixture for manual boundary checks.
