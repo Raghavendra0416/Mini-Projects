@@ -1,0 +1,202 @@
+[
+    {
+        "id": 1,
+        "city": "Visakhapatnam",
+        "country": "India",
+        "temperature": 31,
+        "condition": "Partly cloudy",
+        "wind": "14 km/h"
+    },
+    {
+        "id": 2,
+        "city": "Vijayawada",
+        "country": "India",
+        "temperature": 35,
+        "condition": "Sunny",
+        "wind": "10 km/h"
+    },
+    {
+        "id": 3,
+        "city": "Tirupati",
+        "country": "India",
+        "temperature": 34,
+        "condition": "Clear",
+        "wind": "12 km/h"
+    },
+    {
+        "id": 4,
+        "city": "Guntur",
+        "country": "India",
+        "temperature": 36,
+        "condition": "Hot and sunny",
+        "wind": "8 km/h"
+    },
+    {
+        "id": 5,
+        "city": "Hyderabad",
+        "country": "India",
+        "temperature": 33,
+        "condition": "Cloudy",
+        "wind": "15 km/h"
+    },
+    {
+        "id": 6,
+        "city": "Warangal",
+        "country": "India",
+        "temperature": 34,
+        "condition": "Clear",
+        "wind": "11 km/h"
+    },
+    {
+        "id": 7,
+        "city": "Nizamabad",
+        "country": "India",
+        "temperature": 35,
+        "condition": "Sunny",
+        "wind": "9 km/h"
+    },
+    {
+        "id": 8,
+        "city": "Chennai",
+        "country": "India",
+        "temperature": 32,
+        "condition": "Humid",
+        "wind": "18 km/h"
+    },
+    {
+        "id": 9,
+        "city": "Coimbatore",
+        "country": "India",
+        "temperature": 29,
+        "condition": "Partly cloudy",
+        "wind": "10 km/h"
+    },
+    {
+        "id": 10,
+        "city": "Madurai",
+        "country": "India",
+        "temperature": 36,
+        "condition": "Hot and sunny",
+        "wind": "12 km/h"
+    },
+    {
+        "id": 11,
+        "city": "Tiruchirappalli",
+        "country": "India",
+        "temperature": 35,
+        "condition": "Clear",
+        "wind": "14 km/h"
+    },
+    {
+        "id": 12,
+        "city": "Bengaluru",
+        "country": "India",
+        "temperature": 27,
+        "condition": "Partly cloudy",
+        "wind": "12 km/h"
+    },
+    {
+        "id": 13,
+        "city": "Mysuru",
+        "country": "India",
+        "temperature": 28,
+        "condition": "Clear",
+        "wind": "9 km/h"
+    },
+    {
+        "id": 14,
+        "city": "Hubli",
+        "country": "India",
+        "temperature": 31,
+        "condition": "Sunny",
+        "wind": "15 km/h"
+    },
+    {
+        "id": 15,
+        "city": "Mangaluru",
+        "country": "India",
+        "temperature": 30,
+        "condition": "Rainy",
+        "wind": "20 km/h"
+    },
+    {
+        "id": 16,
+        "city": "Ahmedabad",
+        "country": "India",
+        "temperature": 37,
+        "condition": "Hot and sunny",
+        "wind": "10 km/h"
+    },
+    {
+        "id": 17,
+        "city": "Mumbai",
+        "country": "India",
+        "temperature": 31,
+        "condition": "Humid",
+        "wind": "16 km/h"
+    },
+    {
+        "id": 18,
+        "city": "Pune",
+        "country": "India",
+        "temperature": 28,
+        "condition": "Light rain",
+        "wind": "13 km/h"
+    },
+    {
+        "id": 19,
+        "city": "Nagpur",
+        "country": "India",
+        "temperature": 39,
+        "condition": "Sunny",
+        "wind": "8 km/h"
+    },
+    {
+        "id": 20,
+        "city": "Delhi",
+        "country": "India",
+        "temperature": 38,
+        "condition": "Clear",
+        "wind": "11 km/h"
+    },
+    {
+        "id": 21,
+        "city": "Kolkata",
+        "country": "India",
+        "temperature": 32,
+        "condition": "Thunderstorms",
+        "wind": "14 km/h"
+    },
+    {
+        "id": 22,
+        "city": "Jaipur",
+        "country": "India",
+        "temperature": 36,
+        "condition": "Sunny",
+        "wind": "9 km/h"
+    },
+    {
+        "id": 23,
+        "city": "Lucknow",
+        "country": "India",
+        "temperature": 33,
+        "condition": "Partly cloudy",
+        "wind": "7 km/h"
+    },
+    {
+        "id": 24,
+        "city": "Kochi",
+        "country": "India",
+        "temperature": 29,
+        "condition": "Rainy",
+        "wind": "15 km/h"
+    },
+    {
+        "id": 25,
+        "city": "Srinagar",
+        "country": "India",
+        "temperature": 18,
+        "condition": "Clear",
+        "wind": "5 km/h"
+    }
+]
