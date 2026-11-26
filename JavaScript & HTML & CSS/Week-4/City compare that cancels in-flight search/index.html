@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debounce, abort, races, and the URL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Compare City Weather</h1>
+        <p>City compare that cancels in-flight search</p>
+    </header>
+
+    <article class="dropdown">
+        <label for="search">Search City</label>
+        <input type="text" name="search" id="search" placeholder="Select a City">
+        <p id="status" aria-live="polite"></p>
+
+        <ul id="cityList">
+            <!-- DropDown added using JS -->
+        </ul>
+    </article>
+
+    <section id="compare">
+        <!-- Cards added using JS -->
+    </section>
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>

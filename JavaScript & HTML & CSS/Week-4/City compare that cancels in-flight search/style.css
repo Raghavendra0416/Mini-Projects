@@ -1,0 +1,69 @@
+body {
+    background-color: rgba(53, 51, 51, 0.783);
+    color: beige;
+}
+
+.dropdown {
+    width: 300px;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: 7px;
+    font-size: 15px;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+    background-color: beige;
+    color: black;
+    border: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+li {
+    padding: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+li:hover {
+    background-color: #4a9df5;
+    color: white;
+}
+
+#compare {
+    display: flex;
+    gap: 2rem;
+}
+
+
+/* ul {
+    list-style: none;
+    width: 100%;
+    margin-left: -13.3%;
+    color: white;
+    margin-top: 2px;
+
+    height: 200px;
+    overflow-y: auto;
+
+}
+
+li {
+    border: 1px solid beige;
+    padding: 0.5rem;
+}
+
+li:hover {
+    background-color: lightblue;
+    color: black;
+    cursor: pointer;
+} */
