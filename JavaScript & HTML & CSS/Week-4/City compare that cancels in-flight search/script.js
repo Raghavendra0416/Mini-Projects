@@ -1,5 +1,5 @@
 import { debounce, searchCities } from "./helpers.js";
-import { renderCities, renderCompare } from "./renderCities.js";
+import { renderCities, renderCompare } from "./render.js";
 
 const input = document.getElementById('search');
 const status = document.getElementById('status');
